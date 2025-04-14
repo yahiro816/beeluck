@@ -1,0 +1,28 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["MainQuery","テーブル1"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+
+ref table MainQuery
+ref table DateTableTemplate_9e4e37b8-994f-4e70-82e9-2b83590f4641
+ref table LocalDateTable_4604c886-9d7c-4eb4-a6cd-d529d2e25f64
+ref table LocalDateTable_8b68e0b2-5190-4691-942d-72db4cdc194d
+ref table 名称_パラメーター
+ref table 輸出フラグ_パラメーター
+ref table コード_パラメーター
+ref table テーブル1
+ref table LocalDateTable_bfeaa33e-76eb-403d-a442-542c875c1c10
+
+ref cultureInfo ja-JP
+
