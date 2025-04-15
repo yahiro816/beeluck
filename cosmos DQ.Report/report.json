@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "5e34dca31bb5751b50c4",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0092c9924730e9ee771a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":77.81155015197568,\"z\":0,\"width\":1280,\"height\":496.048632218845,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"uta.  invalid Path\"},{\"queryRef\":\"uta._attachments\"},{\"queryRef\":\"uta._etag\"},{\"queryRef\":\"uta._rid\"},{\"queryRef\":\"uta._self\"},{\"queryRef\":\"Sum(uta._ts)\"},{\"queryRef\":\"uta.3favorite_color\"},{\"queryRef\":\"uta.ad3favorite_color_dup_case\"},{\"queryRef\":\"uta.af3favorite_color_dup_case\"},{\"queryRef\":\"uta.categoryId\"},{\"queryRef\":\"uta.id\"},{\"queryRef\":\"uta.name\"},{\"queryRef\":\"Sum(uta.price)\"},{\"queryRef\":\"uta.uta\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"uta\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"  invalid Path\"},\"Name\":\"uta.  invalid Path\",\"NativeReferenceName\":\"  invalid Path\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"_attachments\"},\"Name\":\"uta._attachments\",\"NativeReferenceName\":\"_attachments\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"_etag\"},\"Name\":\"uta._etag\",\"NativeReferenceName\":\"_etag\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"_rid\"},\"Name\":\"uta._rid\",\"NativeReferenceName\":\"_rid\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"_self\"},\"Name\":\"uta._self\",\"NativeReferenceName\":\"_self\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"_ts\"}},\"Function\":0},\"Name\":\"Sum(uta._ts)\",\"NativeReferenceName\":\"_ts の合計\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"3favorite_color\"},\"Name\":\"uta.3favorite_color\",\"NativeReferenceName\":\"3favorite_color\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"ad3favorite_color_dup_case\"},\"Name\":\"uta.ad3favorite_color_dup_case\",\"NativeReferenceName\":\"ad3favorite_color_dup_case\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"af3favorite_color_dup_case\"},\"Name\":\"uta.af3favorite_color_dup_case\",\"NativeReferenceName\":\"af3favorite_color_dup_case\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"categoryId\"},\"Name\":\"uta.categoryId\",\"NativeReferenceName\":\"categoryId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"id\"},\"Name\":\"uta.id\",\"NativeReferenceName\":\"id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"name\"},\"Name\":\"uta.name\",\"NativeReferenceName\":\"name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"price\"}},\"Function\":0},\"Name\":\"Sum(uta.price)\",\"NativeReferenceName\":\"price の合計\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"uta\"},\"Name\":\"uta.uta\",\"NativeReferenceName\":\"uta\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 496.05,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 77.81,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

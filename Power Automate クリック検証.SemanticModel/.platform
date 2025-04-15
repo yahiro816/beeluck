@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Power Automate クリック検証"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b7231fa6-c751-94f8-4012-a5ef14a7f532"
+  }
+}

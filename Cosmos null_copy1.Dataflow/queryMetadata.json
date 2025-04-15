@@ -1,0 +1,53 @@
+{
+  "formatVersion": "202409",
+  "lastModified": null,
+  "editingSession": {
+    "computeEngineSettings": {},
+    "editingSessionMashup": {
+      "mashupName": "",
+      "queryGroups": [],
+      "documentLocale": "ja-JP",
+      "gatewayObjectId": "83dbee97-b39c-409e-a3cf-e4ac319b0c4c",
+      "queriesMetadata": {
+        "uta": {
+          "queryId": "c42bea06-2946-4664-a583-87c212e475ad",
+          "queryName": "uta",
+          "queryGroupId": null,
+          "entityName": null,
+          "lastKnownIsCalculatedEntity": false,
+          "lastKnownIsLinkedEntity": false,
+          "lastKnownIsParameter": false,
+          "isHidden": false,
+          "lastKnownResultTypeName": "table",
+          "loadEnabled": true,
+          "fieldsMetadata": {},
+          "deleteExistingDataOnLoad": false,
+          "hostProperties": {},
+          "jsonOutputDestinations": null,
+          "bindToDefaultOutputDestination": null,
+          "jsonIncrementalRefreshSettings": null
+        }
+      },
+      "connectionOverrides": [
+        {
+          "path": "{\"host\":\"https:\\/\\/uta.documents.azure.com:443\\/\"}",
+          "kind": "CosmosDB",
+          "provider": "DmtsFabric",
+          "connectionName": "{\"ClusterId\":\"83dbee97-b39c-409e-a3cf-e4ac319b0c4c\",\"DatasourceId\":\"c99acb03-94c3-460b-8849-b382dd371885\"}",
+          "credentialDetails": {},
+          "connectionParameters": {},
+          "privacyGroup": "Public"
+        }
+      ],
+      "useHostConnectionProvider": false,
+      "fastCombine": false,
+      "allowNativeQueries": true,
+      "skipAutomaticTypeAndHeaderDetection": false,
+      "hostProperties": {
+        "dataflowRefreshOutputFileFormat": "Parquet",
+        "enableDateTimeFieldsForStaging": "true",
+        "enablePublishWithoutLoadedQueries": "true"
+      }
+    }
+  }
+}

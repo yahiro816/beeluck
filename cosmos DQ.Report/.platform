@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "cosmos DQ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a5a6715b-0bd7-87be-4227-c9a1b1d720bf"
+  }
+}

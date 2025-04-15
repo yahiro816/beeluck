@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "アラート設定"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bae71a37-f858-952d-49c1-2dec1f05ca64"
+  }
+}

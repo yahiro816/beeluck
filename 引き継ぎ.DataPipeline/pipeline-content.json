@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy data1",
+        "type": "Copy",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "SqlServerSource",
+            "queryTimeout": "02:00:00",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "annotations": [],
+              "type": "SqlServerTable",
+              "schema": [],
+              "typeProperties": {
+                "schema": "SalesLT",
+                "table": "vProductAndDescription",
+                "database": "Q"
+              },
+              "externalReferences": {
+                "connection": "097c59a7-047f-4cf4-9b91-c4e8ca006552"
+              }
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "Append",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "annotations": [],
+              "linkedService": {
+                "name": "Lakehouse_DirectLake",
+                "properties": {
+                  "annotations": [],
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "174e37d3-5584-4fca-8a42-af3b38d00ed6",
+                    "artifactId": "6f4b214d-e7b1-461b-b45a-a50e2802560b",
+                    "rootFolder": "Tables"
+                  }
+                }
+              },
+              "type": "LakehouseTable",
+              "schema": [],
+              "typeProperties": {}
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}

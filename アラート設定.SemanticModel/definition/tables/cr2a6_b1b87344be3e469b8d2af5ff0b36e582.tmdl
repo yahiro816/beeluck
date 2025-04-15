@@ -1,0 +1,322 @@
+table cr2a6_b1b87344be3e469b8d2af5ff0b36e582
+	lineageTag: e8670d3b-7947-422e-b234-b50ca6404707
+
+	column 新しいテーブル
+		dataType: string
+		isNullable: false
+		sourceProviderType: nchar
+		lineageTag: 550740b5-b5a2-4cae-a235-aacffb597577
+		summarizeBy: none
+		sourceColumn: cr2a6_b1b87344be3e469b8d2af5ff0b36e582id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 作成日
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: eba6d832-3649-4458-aa79-0c17820c8afd
+		summarizeBy: none
+		sourceColumn: createdon
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 176716de-c68c-4e73-9ae9-66e41f5a453e
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column 修正日
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 30b022b2-1d96-4184-9ca1-e5ecee0f030d
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 07469594-baf7-480f-bab4-ae23d7122723
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: f058c8c9-f273-498c-a8b2-3a3d357816ea
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 59f665fa-1edd-4cb4-a2eb-9176787eddf3
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column 作成者
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: da6fdafd-10d9-4c11-b5a2-582dc0655f40
+		summarizeBy: none
+		sourceColumn: createdbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdbyyominame
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: d046b1be-22e7-4aaf-a9cc-966ca746dab9
+		summarizeBy: none
+		sourceColumn: createdbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column '作成者 (代理)'
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: 38755073-467c-4d94-a489-0bf78bd12b96
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfbyyominame
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: 81175737-3d69-4857-9981-65611d57af7e
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column 修正者
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: 51e199cd-eb56-4bba-aca0-b74ee655906a
+		summarizeBy: none
+		sourceColumn: modifiedbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedbyyominame
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: 0fd9e074-3bb4-4605-b82b-b3662bf1d766
+		summarizeBy: none
+		sourceColumn: modifiedbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column '修正者 (代理)'
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: a259c943-801e-403d-8668-0f841ce37952
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfbyyominame
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: e6d7acc9-9d11-4cf6-8299-97aa1adc5990
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		isNullable: false
+		sourceProviderType: nchar
+		lineageTag: 6905cbe7-52dd-4b6c-a224-598568d5907d
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 所有者
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: ac6d3b77-6d58-4720-a583-e436b41428b8
+		summarizeBy: none
+		sourceColumn: owneridname
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridyominame
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: 8a4c58d5-1100-4193-8485-d4bad948e21e
+		summarizeBy: none
+		sourceColumn: owneridyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		isNullable: false
+		sourceProviderType: nchar
+		lineageTag: dea86208-2137-4e4e-99db-8df5d7ecce4b
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 759e69ab-7be6-4ae9-b42e-020ea01bd2e4
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 9b2db500-4d76-493c-85f9-212768714c14
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column 所属部署
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(100)
+		lineageTag: c77de63d-9e8f-4070-9851-dc01ee5fe611
+		summarizeBy: none
+		sourceColumn: owningbusinessunitname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 状態
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6caa64e8-98e6-4f06-916f-d843c23c6a9f
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecodename
+		dataType: string
+		sourceProviderType: nvarchar(75)
+		lineageTag: f1705afe-59c7-44e2-adbe-d86f5507769e
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column ステータス
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f7ab42c6-caed-40d7-8049-f82ee6949d08
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscodename
+		dataType: string
+		sourceProviderType: nvarchar(75)
+		lineageTag: 4fd8b7c2-5c83-4eb9-8281-5caa18e1aef2
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'インポート シーケンス番号'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1baa3ca2-7603-4518-b112-c73722e00376
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column レコード作成日
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 57b9e6e9-c17f-4c57-8dd2-6842d0df0a31
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'タイム ゾーン規則のバージョン番号'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dbb56991-9113-4c25-b192-72d03ebfdfe1
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTC 変換タイム ゾーン コード'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d1420277-9cbe-4e58-95a7-3d36024fa099
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 野菜
+		dataType: string
+		sourceProviderType: nvarchar(850)
+		lineageTag: ab790b61-c35d-4ea5-ab6a-867f46a86427
+		summarizeBy: none
+		sourceColumn: cr2a6_yasai
+
+		annotation SummarizationSetBy = Automatic
+
+	column 値段
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 384676c0-7575-419f-9540-8b4fed863a58
+		summarizeBy: sum
+		sourceColumn: cr2a6_nedea
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cr2a6_b1b87344be3e469b8d2af5ff0b36e582 = m
+		mode: directQuery
+		source =
+				let
+				    ソース = CommonDataService.Database("orge650e83b.crm.dynamics.com"),
+				    dbo_cr2a6_b1b87344be3e469b8d2af5ff0b36e582 = ソース{[Schema="dbo",Item="cr2a6_b1b87344be3e469b8d2af5ff0b36e582"]}[Data]
+				in
+				    dbo_cr2a6_b1b87344be3e469b8d2af5ff0b36e582
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,902 @@
+table MainQuery
+	isHidden
+	lineageTag: 6ed65da7-28b9-4925-92a7-8e0ac391736c
+
+	measure 総件数_サブ =
+			
+			var countrow_sub=
+			COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[LPNステータス],
+			        'MainQuery'[iLPN番号],
+			        'MainQuery'[入荷検収時間],
+			        'MainQuery'[入荷担当者],
+			        'MainQuery'[統合インナーコード],
+			        'MainQuery'[商品コード],
+			        'MainQuery'[転送箱No],
+			        'MainQuery'[ストーク有無フラグ]
+			    )
+			)
+			 RETURN
+			 IF(countrow_sub=0,0,countrow_sub) & " 件"
+		isHidden
+		lineageTag: 2f5a7f50-20b6-463f-b7a4-908321c451b9
+
+		changedProperty = IsHidden
+
+	measure データなし_メッセージ_メイン =
+			IF('MainQuery'[総件数_メイン]="0 件","該当する検索結果がありません。
+			
+			「検索条件のクリア」ボタンをクリックしてください。","")
+		isHidden
+		lineageTag: 3e147523-8931-4d2f-9a8e-a55a32e8926d
+
+		changedProperty = IsHidden
+
+	measure データなし_メッセージ_サブ =
+			IF('MainQuery'[総件数_サブ]="0 件","該当する検索結果がありません。
+			
+			「検索条件のクリア」ボタンをクリックしてください。","")
+		isHidden
+		lineageTag: efd52b8b-6c3f-4257-a7ef-3e26632a1543
+
+		changedProperty = IsHidden
+
+	measure 最終更新日時 = ```
+			
+			var current_time= NOW() 
+			RETURN 
+			"最終更新日時：" & FORMAT(current_time, "yyyy/MM/dd HH:mm:ss")
+			
+			```
+		isHidden
+		lineageTag: 00c55131-a70c-4d43-aada-5266159a2498
+
+		changedProperty = IsHidden
+
+	measure selectedvalue_コード = SELECTEDVALUE('コード_パラメーター'[コード_パラメーター 注文])
+		formatString: 0
+		isHidden
+		lineageTag: 9c40543a-ea6d-48fe-a353-ad6cd861cb3a
+
+		changedProperty = IsHidden
+
+	measure 入荷実績数 = ```
+			
+			IF('MainQuery'[selectedvalue_コード]=3, 
+			  SUM(MainQuery[入荷実績数_1])+0,
+			  DISTINCTCOUNTNOBLANK(MainQuery[入荷実績数_2])+0)
+			```
+		formatString: #,0
+		isHidden
+		lineageTag: 6b8947ef-7d59-447a-9e6d-88744d3301de
+
+		changedProperty = IsHidden
+
+	measure 入荷予定数 =
+			
+			IF('MainQuery'[selectedvalue_コード]=3,
+			  SUM(MainQuery[入荷予定数Original])+0,
+			  DISTINCTCOUNTNOBLANK(MainQuery[グローバル番号])+0)
+		formatString: #,0
+		isHidden
+		lineageTag: b9ecf994-0ac4-4280-bcc9-7b8f29576cbe
+
+		changedProperty = IsHidden
+
+	measure 検収可能入荷予定数 =
+			
+			IF('MainQuery'[selectedvalue_コード]=3,
+			  SUM('MainQuery'[検収可能入荷予定数_1])+0,
+			  DISTINCTCOUNTNOBLANK(MainQuery[検収可能入荷予定数_2])+0)
+		formatString: #,0
+		isHidden
+		lineageTag: f9ba1663-dd66-4bf3-8d6d-04ff073420f2
+
+		changedProperty = IsHidden
+
+	measure 出荷不可数 =
+			
+			IF('MainQuery'[selectedvalue_コード]=3,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="在庫品",0,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="MTO品",SUM('MainQuery'[出荷不可数_1])+0,0)),
+			IF('MainQuery'[selectedvalue_コード]=5, 0,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="在庫品",0,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="MTO品",DISTINCTCOUNTNOBLANK('MainQuery'[出荷不可数_2])+0,0))))
+		formatString: #,0
+		isHidden
+		lineageTag: 5e6f769f-1c3b-4719-a220-5c2149eab99c
+
+		changedProperty = IsHidden
+
+	measure 入荷進捗率 =
+			
+			IF('MainQuery'[入荷予定数]=0, 0, 'MainQuery'[入荷実績数]/'MainQuery'[入荷予定数])
+		formatString: 0.0%;-0.0%;0.0%
+		isHidden
+		lineageTag: 630b4f56-8785-4fe5-b64a-d60334f8cde9
+
+		changedProperty = IsHidden
+
+	measure 入荷残数 = 'MainQuery'[入荷予定数]-'MainQuery'[入荷実績数]
+		formatString: #,0
+		isHidden
+		lineageTag: da63b8d6-0948-4d9c-8a31-6fcd87c03ae1
+
+		changedProperty = IsHidden
+
+	measure 別納数 = ```
+			
+			IF('MainQuery'[selectedvalue_コード]=3, 
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="在庫品",0,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="MTO品",SUM('MainQuery'[別納数_1])+0,0)),
+			IF('MainQuery'[selectedvalue_コード]=5, 0, 
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="在庫品",0,
+			  IF(SELECTEDVALUE('MainQuery'[在庫品フラグ])="MTO品",DISTINCTCOUNTNOBLANK('MainQuery'[別納数_2])+0,0))))
+			```
+		formatString: #,0
+		isHidden
+		lineageTag: 4ab744ad-7bdc-4672-ba37-2a232f05e47d
+
+		changedProperty = IsHidden
+
+	measure 入庫予定数 = ```
+			
+			IF('MainQuery'[selectedvalue_コード]=3, 
+			  SUM(MainQuery[入荷実績数_1])+0,
+			  IF('MainQuery'[selectedvalue_コード]=5, 0,
+			  DISTINCTCOUNTNOBLANK(MainQuery[入荷実績数_2])+0))
+			```
+		formatString: #,0
+		isHidden
+		lineageTag: 51d6bba5-5b56-4d9f-9600-8786905f5111
+
+		changedProperty = IsHidden
+
+	measure 入庫実績数 =
+			
+			IF('MainQuery'[selectedvalue_コード]=3, SUM(MainQuery[入庫実績数_1])+0,
+			  IF('MainQuery'[selectedvalue_コード]=5, 0,
+			  DISTINCTCOUNTNOBLANK(MainQuery[入庫実績数_2])+0))
+		formatString: #,0
+		isHidden
+		lineageTag: 45ae1253-d8c4-423d-8718-93a8458307a2
+
+		changedProperty = IsHidden
+
+	measure 入庫残数 = 'MainQuery'[入庫予定数]-'MainQuery'[入庫実績数]
+		formatString: #,0
+		isHidden
+		lineageTag: 343149c8-4b90-4347-abe1-97da5c155c10
+
+		changedProperty = IsHidden
+
+	measure 入庫進捗率 =
+			
+			IF('MainQuery'[入庫予定数]=0, 0, 'MainQuery'[入庫実績数]/'MainQuery'[入庫予定数])
+		formatString: 0.0%;-0.0%;0.0%
+		isHidden
+		lineageTag: 95cd0dc4-2e93-4f80-b83d-65d25c48a8d3
+
+		changedProperty = IsHidden
+
+	measure 総件数_メイン = ```
+			
+			IF('MainQuery'[selectedvalue_コード]=0, 
+			  VAR countrow_p1 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[仕入先コード],
+			        'MainQuery'[仕入先名],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[輸出_P]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p1=0,0,countrow_p1)& " 件",
+			IF('MainQuery'[selectedvalue_コード]=1, 
+			  VAR countrow_p2 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[シューター区分],
+			        'MainQuery'[-列_名称],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[輸出_P]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p2=0,0,countrow_p2)& " 件",
+			IF('MainQuery'[selectedvalue_コード]=2, 
+			  VAR countrow_p3 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[ファミリーコード],
+			        'MainQuery'[-列_名称],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[輸出_P]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p3=0,0,countrow_p3)& " 件",
+			IF('MainQuery'[selectedvalue_コード]=3, 
+			  VAR countrow_p4 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[グローバル番号],
+			        'MainQuery'[仕入先名],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[輸出_P]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p4=0,0,countrow_p4)& " 件",
+			IF('MainQuery'[selectedvalue_コード]=4, 
+			  VAR countrow_p5 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[-列_コード],
+			        'MainQuery'[-列_名称],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[輸出_P]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p5=0,0,countrow_p5)& " 件",
+			IF('MainQuery'[selectedvalue_コード]=5, 
+			  VAR countrow_p6 =
+			  COUNTROWS(
+			    SUMMARIZE(
+			        'MainQuery',
+			        'MainQuery'[入荷予定日],
+			        'MainQuery'[入庫エリア],
+			        'MainQuery'[-列_名称],
+			        'MainQuery'[在庫品フラグ],
+			        'MainQuery'[入荷種別],
+			        'MainQuery'[-列_輸出フラグ]
+			    )
+			  )
+			  RETURN
+			  IF(countrow_p6=0,0,countrow_p6)& " 件"))))))
+			```
+		isHidden
+		lineageTag: f4b3cafa-cd64-41da-962e-22c703338032
+
+		changedProperty = IsHidden
+
+	column ASNステータス
+		dataType: string
+		isHidden
+		lineageTag: 630f714f-f0e6-46b1-8554-9e4a1c85419a
+		summarizeBy: none
+		sourceColumn: ASNステータス
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷予定日
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 5b6811c2-cbbc-4721-bd65-0d6dd632d8e2
+		summarizeBy: none
+		sourceColumn: 入荷予定日
+
+		variation バリエーション
+			isDefault
+			relationship: fef25dee-b1b9-4ee9-b19a-1d0e5068d0ef
+			defaultHierarchy: LocalDateTable_4604c886-9d7c-4eb4-a6cd-d529d2e25f64.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 置場コード
+		dataType: string
+		isHidden
+		lineageTag: 5e67cf89-8179-4449-a765-31441a055d8c
+		summarizeBy: none
+		sourceColumn: 置場コード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 仕入先コード
+		dataType: string
+		isHidden
+		lineageTag: 86ac715b-b94b-4d29-975f-52f6c3e0b2b0
+		summarizeBy: none
+		sourceColumn: 仕入先コード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ファミリーコードOriginal
+		dataType: string
+		isHidden
+		lineageTag: afffb732-ce68-4ce4-bfe5-f526080627ef
+		summarizeBy: none
+		sourceColumn: ファミリーコードOriginal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 在庫品フラグ_区分値
+		dataType: string
+		isHidden
+		lineageTag: d11c20df-84c5-489f-b272-5ff6640d98c2
+		summarizeBy: none
+		sourceColumn: 在庫品フラグ_区分値
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 商品コード
+		dataType: string
+		isHidden
+		lineageTag: dba0c206-f389-4647-83ca-0302398c6e78
+		summarizeBy: none
+		sourceColumn: 商品コード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出荷仕分用エリアコード
+		dataType: string
+		isHidden
+		lineageTag: cc2b820b-41a8-45c3-bfe2-7d4a433c2dd0
+		summarizeBy: none
+		sourceColumn: 出荷仕分用エリアコード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 転送箱No
+		dataType: string
+		isHidden
+		lineageTag: d2da2223-1a84-469a-bd44-ccae8982ef75
+		summarizeBy: none
+		sourceColumn: 転送箱No
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column グローバル番号
+		dataType: string
+		isHidden
+		lineageTag: 64dab20b-9472-4972-9624-be719b5cff36
+		summarizeBy: none
+		sourceColumn: グローバル番号
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXT_J_M_I_S_ASN_TYPE
+		dataType: string
+		isHidden
+		lineageTag: 67919c69-a73c-44e6-9d6b-1ed4279285f4
+		summarizeBy: none
+		sourceColumn: EXT_J_M_I_S_ASN_TYPE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 統合インナーコード
+		dataType: string
+		isHidden
+		lineageTag: 9447e9a0-7b78-497b-a208-44e831f12872
+		summarizeBy: none
+		sourceColumn: 統合インナーコード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column iLPN番号
+		dataType: string
+		isHidden
+		lineageTag: fdfb5fb4-8405-4af9-a664-fcba87ca9d53
+		summarizeBy: none
+		sourceColumn: iLPN番号
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷検収時間
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 4eadbced-8ead-4946-9b34-3df28d5fe592
+		summarizeBy: none
+		sourceColumn: 入荷検収時間
+
+		variation バリエーション
+			isDefault
+			relationship: 909e4912-418c-4a3d-ab92-788fc343e2ff
+			defaultHierarchy: LocalDateTable_8b68e0b2-5190-4691-942d-72db4cdc194d.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷担当者
+		dataType: string
+		isHidden
+		lineageTag: c64c6afd-7ffb-472a-a42d-d69a2382d2dc
+		summarizeBy: none
+		sourceColumn: 入荷担当者
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷予定数Original
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c55682c-2d36-4193-9401-8b8c8c50e97a
+		summarizeBy: sum
+		sourceColumn: 入荷予定数Original
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 検収可能入荷予定数_1
+		dataType: double
+		isHidden
+		lineageTag: a87a8f54-3fcd-46db-bb48-257fb741c30e
+		summarizeBy: sum
+		sourceColumn: 検収可能入荷予定数_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 検収可能入荷予定数_2
+		dataType: string
+		isHidden
+		lineageTag: 00dfd59a-60fa-4f8a-a6f7-5be6b03e9e93
+		summarizeBy: none
+		sourceColumn: 検収可能入荷予定数_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出荷不可数_1
+		dataType: double
+		isHidden
+		lineageTag: 76acec1a-2d89-4eb9-b6ce-dc17876a3880
+		summarizeBy: sum
+		sourceColumn: 出荷不可数_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 出荷不可数_2
+		dataType: string
+		isHidden
+		lineageTag: 333e5505-b6c4-4d1d-804f-84a56ae92bee
+		summarizeBy: none
+		sourceColumn: 出荷不可数_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 別納数_1
+		dataType: double
+		isHidden
+		lineageTag: 0c135d65-f719-45d0-918b-f110944aa578
+		summarizeBy: sum
+		sourceColumn: 別納数_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 別納数_2
+		dataType: string
+		isHidden
+		lineageTag: 6249654c-3ae4-463e-b37c-655fbd02e1e4
+		summarizeBy: none
+		sourceColumn: 別納数_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷実績数_1
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c82c7b41-e380-4bcc-a33b-0adace6b753c
+		summarizeBy: sum
+		sourceColumn: 入荷実績数_1
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入庫実績数_1
+		dataType: double
+		isHidden
+		lineageTag: cceb046d-8540-4597-918f-f74c76e04c10
+		summarizeBy: sum
+		sourceColumn: 入庫実績数_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 入庫実績数_2
+		dataType: string
+		isHidden
+		lineageTag: 60082bf2-a931-4c4b-b47b-184d7a0bf9bd
+		summarizeBy: none
+		sourceColumn: 入庫実績数_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 別納フラグ
+		dataType: string
+		isHidden
+		lineageTag: 7eea591f-2dd1-467a-9ec3-f78ed1f3d201
+		summarizeBy: none
+		sourceColumn: 別納フラグ
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出荷不可フラグ
+		dataType: string
+		isHidden
+		lineageTag: 8f85ba44-f1bc-429a-a4aa-66a97f5b1950
+		summarizeBy: none
+		sourceColumn: 出荷不可フラグ
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先コード
+		dataType: string
+		isHidden
+		lineageTag: 0868ba31-1452-4974-bfb0-fbc0258b7550
+		summarizeBy: none
+		sourceColumn: 得意先コード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 配送先コード
+		dataType: string
+		isHidden
+		lineageTag: fdcf49c0-e52e-4ef6-984d-18297247cfba
+		summarizeBy: none
+		sourceColumn: 配送先コード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 引渡区分
+		dataType: string
+		isHidden
+		lineageTag: 9a22bf75-55b9-4db4-b0c5-8595405d84e9
+		summarizeBy: none
+		sourceColumn: 引渡区分
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 輸出フラグ_区分値
+		dataType: string
+		isHidden
+		lineageTag: 46cd7101-d62e-459f-a3c7-e65ea2ac5b10
+		summarizeBy: none
+		sourceColumn: 輸出フラグ_区分値
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column シューター区分
+		dataType: string
+		isHidden
+		lineageTag: a4b7173e-4fce-4483-afe5-7a69fa718b71
+		summarizeBy: none
+		sourceColumn: シューター区分
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column シューター番号
+		dataType: string
+		isHidden
+		lineageTag: 6e299031-d3d6-4535-8e6c-49145fdbc758
+		summarizeBy: none
+		sourceColumn: シューター番号
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ストーク有無フラグ
+		dataType: string
+		isHidden
+		lineageTag: 8f65a4f8-bb06-4b13-bf17-3609715380f0
+		summarizeBy: none
+		sourceColumn: ストーク有無フラグ
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 仕入先名
+		dataType: string
+		isHidden
+		lineageTag: 47552bb3-62dd-48e6-ab2f-26a1edb49421
+		summarizeBy: none
+		sourceColumn: 仕入先名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入庫ロケーションコード
+		dataType: string
+		isHidden
+		lineageTag: d7bc4447-9312-4773-9ab3-95fb4396c052
+		summarizeBy: none
+		sourceColumn: 入庫ロケーションコード
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column タイトル = "入荷進捗管理"
+		isHidden
+		lineageTag: 88f63271-ef00-4a4f-8edb-6d580f0511d5
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ファミリーコード = LEFT('MainQuery'[ファミリーコードOriginal],3)
+		isHidden
+		lineageTag: 2cd23a54-5255-4383-85bf-6c28776da040
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷種別 =
+			
+			IF ('MainQuery'[EXT_J_M_I_S_ASN_TYPE]="1", "MTO入荷",
+			IF ('MainQuery'[EXT_J_M_I_S_ASN_TYPE]="2", "在庫入荷",
+			IF ('MainQuery'[EXT_J_M_I_S_ASN_TYPE]="3", "出荷転送",
+			IF ('MainQuery'[EXT_J_M_I_S_ASN_TYPE]="4", "社内移動",""))))
+		isHidden
+		lineageTag: 95e1bb8d-9b3b-49d5-9aae-8c2407db5c52
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 在庫品フラグ =
+			
+			IF('MainQuery'[在庫品フラグ_区分値]="0","MTO品",
+			IF('MainQuery'[在庫品フラグ_区分値]="1","在庫品",BLANK()))
+		isHidden
+		lineageTag: 8a0a18b4-ba13-4637-9cec-6fc40b665e2f
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 輸出フラグ_区分名 =
+			
+			IF('MainQuery'[輸出フラグ_区分値]="0", "国内",
+			IF('MainQuery'[輸出フラグ_区分値]="1","輸出",BLANK()))
+		isHidden
+		lineageTag: 47bf797a-ed59-4ffb-b4ff-53cc80c2b88f
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入庫エリア = LEFT('MainQuery'[入庫ロケーションコード],3)
+		isHidden
+		lineageTag: 22528e69-c334-4f0c-a756-ecc63a083022
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ストーク有無_検索 =
+			
+			IF(ISBLANK('MainQuery'[ストーク有無フラグ]),"なし","あり")
+		isHidden
+		lineageTag: 972c196e-fa1a-4f86-adef-005f04e8dcc9
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出荷不可フラグ_検索 = IF('MainQuery'[出荷不可フラグ]="1", "出荷不可のみ", "出荷不可を含まない")
+		isHidden
+		lineageTag: 3e134ed1-5572-4a08-b54e-e37f35657aca
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 別納区分_検索 =
+			SWITCH(
+			    TRUE(),
+			    'MainQuery'[別納フラグ]="0", "別納以外",
+			    'MainQuery'[別納フラグ]="1", "直送切替",
+			    'MainQuery'[別納フラグ]="2", "別納（切替元）",
+			    'MainQuery'[別納フラグ]="3", "別納（切替先）",
+			    BLANK()
+			)
+		isHidden
+		lineageTag: 2583a45b-a659-46e1-b84c-fdbcdef2c128
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPNステータス =
+			SWITCH(
+			    TRUE(),
+			    'MainQuery'[ASNステータス] = "8000","入庫済",
+			    'MainQuery'[ASNステータス] >= "3000" && 'MainQuery'[入荷予定数] = 'MainQuery'[入荷実績数], "入荷済",
+			    'MainQuery'[ASNステータス] >= "3000" && 'MainQuery'[入荷予定数] <> 'MainQuery'[入荷実績数], "入荷中",
+			    'MainQuery'[ASNステータス] = "1000", "未入荷",
+			    BLANK()
+			)
+		isHidden
+		lineageTag: 8c447c57-ac05-4bbe-aa71-7574af40b330
+		summarizeBy: none
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column -列_コード = "-"
+		isHidden
+		lineageTag: 830b8bff-1216-4a8d-9d4b-dbff255fde20
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 輸出_P =
+			
+			IF('MainQuery'[在庫品フラグ]="在庫品","-",
+			  IF('MainQuery'[在庫品フラグ]="MTO品",'MainQuery'[輸出フラグ_区分名],"-"))
+		isHidden
+		lineageTag: 2851f11a-6075-4aab-8e87-7d70ae49560c
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column -列_名称 = "-"
+		isHidden
+		lineageTag: b8ab6d0a-d273-4796-bf6b-112c9a5df3ed
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column -列_輸出フラグ = "-"
+		isHidden
+		lineageTag: 21675c4a-8bb0-4d2c-b450-46563f84faa8
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷実績数_2
+		dataType: string
+		isHidden
+		lineageTag: 236c894b-0400-4b42-8b5c-f16df4e69a5c
+		summarizeBy: none
+		sourceColumn: 入荷実績数_2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 入荷予定日_計算 = IF('MainQuery'[入荷予定日]=TODAY(),1,0)
+		isHidden
+		formatString: 0
+		lineageTag: 37ab3064-397e-4b15-a426-dab908bc66e6
+		summarizeBy: sum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MainQuery = m
+		mode: import
+		source =
+				let
+				    ソース = MySQL.Database("10.40.0.11:3306", "default_receiving", [ReturnSingleDatabase=true, Query="SELECT DISTINCT `T_ARRIVAL_CHECK_DWH`.`ORG_ID` AS '置場コード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`ASN_STATUS` AS 'ASNステータス'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` AS '入荷予定日'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`VENDOR_ID` AS '仕入先コード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER` AS 'グローバル番号'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_FAMILY_CODE` AS 'ファミリーコード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` AS '在庫品フラグ'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_PRODUCT_C_D` AS '商品コード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_SHIPMENT_CLASS_AREA_CODE` AS '出荷仕分用エリアコード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_TRANSFER_BOX_NO` AS '転送箱No'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`ITEM_ID` AS '総合インナーコード'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`ILPN_ID` AS 'iLPN番号'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`LOCATION_ID` AS '入庫ロケーションコード'#(lf)#(tab),CONVERT_TZ(`T_ARRIVAL_CHECK_DWH`.`ACTIVITY_DATE_TIME_RECEIVE`, '+00:00', '+09:00') AS '入荷検収時間'#(lf)#(tab),`RCV_LPN`.`EXT_J_M_I_S_ASN_TYPE` AS `EXT_J_M_I_S_ASN_TYPE`#(lf)#(tab),CONCAT (#(lf)#(tab)#(tab)`ORG_USER`.`LAST_NAME`#(lf)#(tab)#(tab),' '#(lf)#(tab)#(tab),`ORG_USER`.`FIRST_NAME`#(lf)#(tab)#(tab)) AS '入荷担当者'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`SHIPPED_QUANTITY` AS '入荷予定数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `RCV_LPN`.`EXT_J_M_I_S_SUPPLIER_COUNTRY_CODE` = '192'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` BETWEEN DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)AND DATE_ADD(DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00')), INTERVAL 3 DAY)#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`SHIPPED_QUANTITY`#(lf)#(tab)#(tab)#(tab)WHEN `RCV_LPN`.`EXT_J_M_I_S_SUPPLIER_COUNTRY_CODE` <> '192'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE`BETWEEN DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)AND DATE_ADD(DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00')), INTERVAL 7 DAY)#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`SHIPPED_QUANTITY`#(lf)#(tab)#(tab)#(tab)WHEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` = DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`SHIPPED_QUANTITY`#(lf)#(tab)#(tab)#(tab)ELSE 0#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '検収可能入荷予定数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `RCV_LPN`.`EXT_J_M_I_S_SUPPLIER_COUNTRY_CODE` = '192'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` BETWEEN DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)AND DATE_ADD(DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00')), INTERVAL 3 DAY)#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)WHEN `RCV_LPN`.`EXT_J_M_I_S_SUPPLIER_COUNTRY_CODE` <> '192'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE`BETWEEN DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)AND DATE_ADD(DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00')), INTERVAL 7 DAY)#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)WHEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` = DATE (CONVERT_TZ(NOW(), '+00:00', '+09:00'))#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '検収可能入荷予定数_2'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `DCO_ORDER_LINE`.`EXT_J_M_I_S_NO_SHIPMENT_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `DCO_ORDER_LINE`.`PRE_PACK_QUANTITY`#(lf)#(tab)#(tab)#(tab)ELSE 0#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '出荷不可数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `DCO_ORDER_LINE`.`EXT_J_M_I_S_NO_SHIPMENT_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '出荷不可数_2'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `DCO_ORDER_LINE`.`EXT_J_M_I_S_ARRN_SHIP_DIV`IN('1', '2')#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `DCO_ORDER_LINE`.`PRE_PACK_QUANTITY`#(lf)#(tab)#(tab)#(tab)ELSE 0#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '別納数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `DCO_ORDER_LINE`.`EXT_J_M_I_S_ARRN_SHIP_DIV`IN('1', '2')#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '0'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '別納数_2'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`QUANTITY_RECEIVE` AS '入荷実績数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `T_ARRIVAL_CHECK_DWH`.`QUANTITY_RECEIVE` IS NOT NULL#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '入荷実績数_2'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `T_ARRIVAL_CHECK_DWH`.`USER_ID_PUTAWAY` IS NOT NULL#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`QUANTITY_PUTAWAY`#(lf)#(tab)#(tab)#(tab)ELSE 0#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '入庫実績数'#(lf)#(tab),(#(lf)#(tab)#(tab)CASE #(lf)#(tab)#(tab)#(tab)WHEN `T_ARRIVAL_CHECK_DWH`.`USER_ID_PUTAWAY` IS NOT NULL#(lf)#(tab)#(tab)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG` = '1'#(lf)#(tab)#(tab)#(tab)#(tab)THEN `T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)#(tab)END#(lf)#(tab)#(tab)) AS '入庫実績数_2'#(lf)#(tab),`DCO_ORDER_LINE`.`EXT_J_M_I_S_ARRN_SHIP_DIV` AS '別納フラグ'#(lf)#(tab),`DCO_ORDER_LINE`.`EXT_J_M_I_S_NO_SHIPMENT_FLAG` AS '出荷不可フラグ'#(lf)#(tab),`T_ARRIVAL_CHECK_DWH`.`CUSTOMER_ID` AS '得意先コード'#(lf)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_SHIP_TO_CD` AS '配送先コード'#(lf)#(tab),`M_DELIVERY_DIV`.`DIVISION_NAME` AS '引渡区分'#(lf)#(tab),`M_DELI_DIV`.`DIVISION_NAME` AS 'ストーク有無フラグ'#(lf)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_EXPORT_FLAG` AS '輸出フラグ'#(lf)#(tab),SUBSTRING_INDEX(`DCO_ORDER`.`EXT_J_M_I_S_ORIGIN_HOME_LOCN`, '-', 1) AS 'シューター区分'#(lf)#(tab),SUBSTRING_INDEX(`DCO_ORDER`.`EXT_J_M_I_S_ORIGIN_HOME_LOCN`, '-', - 1) AS 'シューター番号'#(lf)#(tab),`VEN_VENDOR`.`COMPANY_NAME` AS '仕入先名'#(lf)FROM (#(lf)#(tab)SELECT `T_ARRIVAL_CHECK_DWH`.`ORG_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ASN_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ASN_STATUS`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`VENDOR_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_GLOBAL_NUMBER`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_FAMILY_CODE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_M_T_O_FLAG`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_PRODUCT_C_D`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_SHIPMENT_CLASS_AREA_CODE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`EXT_J_M_I_S_TRANSFER_BOX_NO`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ITEM_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`LPN_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ILPN_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`ACTIVITY_DATE_TIME_RECEIVE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`SHIPPED_QUANTITY`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`USER_ID_RECEIVE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`QUANTITY_RECEIVE`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`USER_ID_PUTAWAY`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`QUANTITY_PUTAWAY`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`CUSTOMER_ID`#(lf)#(tab)#(tab),`T_ARRIVAL_CHECK_DWH`.`LOCATION_ID`#(lf)#(tab)FROM mawmad_db.`T_ARRIVAL_CHECK_DWH`#(lf)#(tab)WHERE `T_ARRIVAL_CHECK_DWH`.`ASN_STATUS` <> '9000'#(lf)#(tab)) AS `T_ARRIVAL_CHECK_DWH`#(lf)INNER JOIN (#(lf)#(tab)SELECT `RCV_LPN`.`ORG_ID`#(lf)#(tab)#(tab),`RCV_LPN`.`EXT_J_M_I_S_ASN_TYPE`#(lf)#(tab)#(tab),`RCV_LPN`.`LPN_ID`#(lf)#(tab)#(tab),`RCV_LPN`.`EXT_J_M_I_S_SUPPLIER_COUNTRY_CODE`#(lf)#(tab)FROM default_receiving.`RCV_LPN`#(lf)#(tab)) AS `RCV_LPN`#(lf)#(tab)ON `T_ARRIVAL_CHECK_DWH`.`LPN_ID` = `RCV_LPN`.`LPN_ID`#(lf)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ORG_ID` = `RCV_LPN`.`ORG_ID`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `ORG_USER`.`USER_ID`#(lf)#(tab)#(tab),`ORG_USER`.`FIRST_NAME`#(lf)#(tab)#(tab),`ORG_USER`.`LAST_NAME`#(lf)#(tab)FROM default_organization.`ORG_USER`#(lf)#(tab)) AS `ORG_USER`#(lf)#(tab)ON `T_ARRIVAL_CHECK_DWH`.`USER_ID_RECEIVE` = `ORG_USER`.`USER_ID`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `VEN_VENDOR`.`VENDOR_ID`#(lf)#(tab)#(tab),`VEN_VENDOR`.`COMPANY_NAME`#(lf)#(tab)FROM default_vendor.`VEN_VENDOR`#(lf)#(tab)) AS `VEN_VENDOR`#(lf)#(tab)ON `T_ARRIVAL_CHECK_DWH`.`VENDOR_ID` = `VEN_VENDOR`.`VENDOR_ID`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `DCO_ORDER_LINE`.`ORG_ID`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`FACILITY_ID`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`ORDER_ID`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`ALLOCATION_SOURCE_ID`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`EXT_J_M_I_S_NO_SHIPMENT_FLAG`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`PRE_PACK_QUANTITY`#(lf)#(tab)#(tab),`DCO_ORDER_LINE`.`EXT_J_M_I_S_ARRN_SHIP_DIV`#(lf)#(tab)FROM default_dcorder.`DCO_ORDER_LINE`#(lf)#(tab)) AS `DCO_ORDER_LINE`#(lf)#(tab)ON `T_ARRIVAL_CHECK_DWH`.`ASN_ID` = SUBSTRING_INDEX(`DCO_ORDER_LINE`.`ALLOCATION_SOURCE_ID`, '-', 1)#(lf)#(tab)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ORG_ID` = `DCO_ORDER_LINE`.`ORG_ID`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `DCO_ORDER`.`ORG_ID`#(lf)#(tab)#(tab),`DCO_ORDER`.`FACILITY_ID`#(lf)#(tab)#(tab),`DCO_ORDER`.`ORDER_ID`#(lf)#(tab)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_SHIP_TO_CD`#(lf)#(tab)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_EXPORT_FLAG`#(lf)#(tab)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_DELI_DIV`#(lf)#(tab)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_DELIVERY_DIV`#(lf)#(tab)#(tab),`DCO_ORDER`.`EXT_J_M_I_S_ORIGIN_HOME_LOCN`#(lf)#(tab)FROM default_dcorder.`DCO_ORDER`#(lf)#(tab)) AS `DCO_ORDER`#(lf)#(tab)ON `DCO_ORDER_LINE`.`ORDER_ID` = `DCO_ORDER`.`ORDER_ID`#(lf)#(tab)#(tab)AND `DCO_ORDER_LINE`.`ORG_ID` = `DCO_ORDER`.`ORG_ID`#(lf)#(tab)#(tab)AND `DCO_ORDER_LINE`.`FACILITY_ID` = `DCO_ORDER`.`FACILITY_ID`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `M_DIVISION_NAME`.`DIVISION_VALUE`#(lf)#(tab)#(tab),`M_DIVISION_NAME`.`DIVISION_NAME`#(lf)#(tab)FROM bitool.`M_DIVISION_NAME`#(lf)#(tab)WHERE `M_DIVISION_NAME`.`DIVISION_ID` = 'DELI_DIV'#(lf)#(tab)) AS `M_DELI_DIV`#(lf)#(tab)ON `DCO_ORDER`.`EXT_J_M_I_S_DELI_DIV` = `M_DELI_DIV`.`DIVISION_VALUE`#(lf)LEFT OUTER JOIN (#(lf)#(tab)SELECT `M_DIVISION_NAME`.`DIVISION_VALUE`#(lf)#(tab)#(tab),`M_DIVISION_NAME`.`DIVISION_NAME`#(lf)#(tab)FROM bitool.`M_DIVISION_NAME`#(lf)#(tab)WHERE `M_DIVISION_NAME`.`DIVISION_ID` = 'DELIVERY_DIV'#(lf)#(tab)) AS `M_DELIVERY_DIV`#(lf)#(tab)ON `DCO_ORDER`.`EXT_J_M_I_S_DELIVERY_DIV` = `M_DELIVERY_DIV`.`DIVISION_VALUE`#(lf)WHERE `T_ARRIVAL_CHECK_DWH`.`ESTIMATED_DELIVERY_DATE` BETWEEN DATE_SUB(convert_tz(NOW(), '+00:00', '+09:00'), INTERVAL 7 DAY)#(lf)#(tab)#(tab)AND DATE_ADD(convert_tz(NOW(), '+00:00', '+09:00'), INTERVAL 7 DAY)#(lf)#(tab)AND `T_ARRIVAL_CHECK_DWH`.`ORG_ID` IN (#(lf)#(tab)#(tab)'0052'#(lf)#(tab)#(tab),'0053'#(lf)#(tab)#(tab),'0055'#(lf)#(tab)#(tab))"]),
+				    変更された型 = Table.TransformColumnTypes(ソース,{{"入荷予定日", type date}}),
+				    #"名前が変更された列 " = Table.RenameColumns(変更された型,{{"入荷実績数", "入荷実績数_1"}, {"入荷予定数", "入荷予定数Original"}, {"検収可能入荷予定数", "検収可能入荷予定数_1"}, {"出荷不可数", "出荷不可数_1"}, {"別納数", "別納数_1"}, {"入庫実績数", "入庫実績数_1"}, {"在庫品フラグ", "在庫品フラグ_区分値"}, {"輸出フラグ", "輸出フラグ_区分値"}, {"ファミリーコード", "ファミリーコードOriginal"}, {"総合インナーコード", "統合インナーコード"}})
+				in
+				    #"名前が変更された列 "
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

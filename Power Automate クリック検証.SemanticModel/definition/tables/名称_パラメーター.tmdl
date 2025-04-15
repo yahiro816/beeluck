@@ -1,0 +1,54 @@
+table 名称_パラメーター
+	isHidden
+	lineageTag: 321d8f0e-028e-4a23-b9ce-d28d76a2d72a
+
+	column 名称_パラメーター
+		isHidden
+		lineageTag: 81f2b841-77e9-4850-bd45-20a7789cf154
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: '名称_パラメーター 注文'
+
+		relatedColumnDetails
+			groupByColumn: '名称_パラメーター フィールド'
+
+		annotation SummarizationSetBy = Automatic
+
+	column '名称_パラメーター フィールド'
+		isHidden
+		lineageTag: e59acd14-26c4-4b7b-8eae-2c664c9edba0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: '名称_パラメーター 注文'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column '名称_パラメーター 注文'
+		isHidden
+		formatString: 0
+		lineageTag: a3b0a99c-9f48-44f3-85ee-0299277fa610
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 名称_パラメーター = calculated
+		mode: import
+		source =
+				{
+				    ("名称", NAMEOF('MainQuery'[仕入先名]), 0),
+				    ("名称", NAMEOF('MainQuery'[-列_名称]), 1),
+				    ("名称", NAMEOF('MainQuery'[-列_名称]), 2),
+				    ("名称", NAMEOF('MainQuery'[仕入先名]), 3),
+				    ("名称", NAMEOF('MainQuery'[-列_名称]), 4),
+				    ("名称", NAMEOF('MainQuery'[-列_名称]), 5)
+				}
+
+	annotation PBI_Id = 90518058c98d41eca5858061e7c95e7f
+

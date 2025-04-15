@@ -1,0 +1,4866 @@
+cultureInfo ja-JP
+
+	linguisticMetadata =
+			{
+			  "Version": "3.5.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "main_query": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "main query": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MainQuery": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "query": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "main enquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "main inquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "main interrogation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "enquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interrogation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "main question": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main request": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main probe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ASNステータス": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "ASNステータス"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ASNステータス": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷予定日"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷予定日": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "main_query.入荷予定日.日付の階層": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷予定日",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日付の階層": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日.年": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷予定日",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "年"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定日 年": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日.四半期": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷予定日",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "四半期"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "四半期": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定日 四半期": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日.月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷予定日",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "月": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定日 月": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日.日": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷予定日",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "日"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定日 日": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.置場コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "置場コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "置場コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.仕入先コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "仕入先コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "仕入先コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ファミリーコード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "ファミリーコードOriginal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ファミリーコード original": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ファミリーコードOriginal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ファミリーコード archetype": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "ファミリーコード exemplar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "ファミリーコード template": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.在庫品フラグ_original": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "在庫品フラグ_区分値"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "在庫品フラグ 区分値": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "在庫品フラグ_区分値": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.商品コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "商品コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "商品コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷仕分用エリアコード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷仕分用エリアコード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "出荷仕分用エリアコード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.転送箱_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "転送箱No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "転送箱 no": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "転送箱No": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "転送箱 number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.グローバル番号": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "グローバル番号"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "グローバル番号": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ext_j_m_i_s_asn_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "EXT_J_M_I_S_ASN_TYPE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ext j m i s asn type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EXT_J_M_I_S_ASN_TYPE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.総合インナーコード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "統合インナーコード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "統合インナーコード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.i_LPN番号": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "iLPN番号"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "i LPN番号": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "iLPN番号": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷検収時間": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷検収時間"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷検収時間": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "main_query.入荷検収時間.日付の階層": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷検収時間",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日付の階層": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷検収時間.年": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷検収時間",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "年"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "年": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷検収時間 年": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷検収時間.四半期": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷検収時間",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "四半期"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "四半期": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷検収時間 四半期": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷検収時間.月": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷検収時間",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "月"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "月": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷検収時間 月": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷検収時間.日": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "VariationSource": "入荷検収時間",
+			          "VariationSet": "バリエーション",
+			          "Hierarchy": "日付の階層",
+			          "HierarchyLevel": "日"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷検収時間 日": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷担当者": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷担当者"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷担当者": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定数_original": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷予定数Original"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入荷予定数 original": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定数Original": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "入荷予定数 archetype": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "入荷予定数 exemplar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "入荷予定数 template": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.検収可能入荷予定数_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "検収可能入荷予定数_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "検収可能入荷予定数 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "検収可能入荷予定数_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.検収可能入荷予定数_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "検収可能入荷予定数_2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "検収可能入荷予定数 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "検収可能入荷予定数_2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷不可数_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷不可数_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "出荷不可数 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "出荷不可数_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷不可数_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷不可数_2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "出荷不可数 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "出荷不可数_2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.別納数_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "別納数_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "別納数 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "別納数_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.別納数_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "別納数_2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "別納数 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "別納数_2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷実績数_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷実績数_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入荷実績数 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷実績数_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫実績数_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫実績数_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入庫実績数 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入庫実績数_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫実績数_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫実績数_2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入庫実績数 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入庫実績数_2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.別納フラグ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "別納フラグ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "別納フラグ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷不可フラグ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷不可フラグ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "出荷不可フラグ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.得意先コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "得意先コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "得意先コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.配送先コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "配送先コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "配送先コード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.引渡区分": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "引渡区分"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "引渡区分": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.輸出フラグ_区分値": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "輸出フラグ_区分値"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "輸出フラグ 区分値": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "輸出フラグ_区分値": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.シューター区分": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "シューター区分"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "シューター区分": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "コード": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.シューター番号": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "シューター番号"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "シューター番号": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ストーク有無フラグ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "ストーク有無フラグ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ストーク有無フラグ": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ストーク区分": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.仕入先名": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "仕入先名"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "仕入先名": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫ロケーションコード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫ロケーションコード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入庫ロケーションコード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.タイトル": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "タイトル"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "タイトル": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ファミリーコード3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "ファミリーコード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ファミリーコード": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷種別": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷種別"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷種別": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.在庫品フラグ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "在庫品フラグ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "在庫品フラグ": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.輸出フラグ_区分名": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "輸出フラグ_区分名"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "輸出フラグ 区分名": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "輸出フラグ_区分名": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫エリア": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫エリア"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入庫エリア": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.ストーク有無_検索": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "ストーク有無_検索"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ストーク有無 検索": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ストーク有無_検索": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷不可フラグ_検索": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷不可フラグ_検索"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "出荷不可フラグ 検索": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "出荷不可フラグ_検索": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.別納区分_検索": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "別納区分_検索"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "別納区分 検索": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "別納区分_検索": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.LPNステータス_検索": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "LPNステータス"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LPNステータス": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.列_コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "-列_コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "-列_コード": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "列_コード": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.輸出_P": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "輸出_P"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "輸出 P": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "輸出_P": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "輸出フラグ": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.列_名称": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "-列_名称"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "-列_名称": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "列_名称": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "名称": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.列_輸出フラグ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "-列_輸出フラグ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "-列_輸出フラグ": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "列_輸出フラグ": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷実績数_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷実績数_2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "入荷実績数 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷実績数_2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定日_計算": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷予定日_計算"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷予定日 計算": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "入荷予定日_計算": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.総件数_サブ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "総件数_サブ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "総件数 サブ": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "総件数_サブ": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.データなし_メッセージ_メイン": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "データなし_メッセージ_メイン"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "データなし メッセージ メイン": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "データなし_メッセージ_メイン": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.データなし_メッセージ_サブ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "データなし_メッセージ_サブ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "データなし メッセージ サブ": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "データなし_メッセージ_サブ": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.最終更新日時": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "最終更新日時"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "最終更新日時": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.selectedvalue_コード": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "selectedvalue_コード"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selectedvalue コード": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selectedvalue_コード": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷実績数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷実績数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷実績数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷予定数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷予定数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷予定数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.検収可能入荷予定数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "検収可能入荷予定数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "検収可能入荷予定数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.出荷不可数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "出荷不可数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "出荷不可数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷進捗率": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷進捗率"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷進捗率": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入荷残数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入荷残数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入荷残数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.別納数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "別納数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "別納数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫予定数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫予定数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入庫予定数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫実績数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫実績数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入庫実績数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫残数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫残数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入庫残数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.入庫進捗率": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "入庫進捗率"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "入庫進捗率": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "main_query.総件数_メイン": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MainQuery",
+			          "ConceptualProperty": "総件数_メイン"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "総件数 メイン": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "総件数_メイン": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "名称_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "名称_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "名称 パラメーター": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "名称_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.8613
+			          }
+			        }
+			      ]
+			    },
+			    "名称_パラメーター.名称_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "名称_パラメーター",
+			          "ConceptualProperty": "名称_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "名称 パラメーター": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "名称_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "名称_パラメーター.名称_パラメーター_フィールド": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "名称_パラメーター",
+			          "ConceptualProperty": "名称_パラメーター フィールド"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "名称_パラメーター フィールド": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "名称_パラメーター.名称_パラメーター_注文": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "名称_パラメーター",
+			          "ConceptualProperty": "名称_パラメーター 注文"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "名称_パラメーター 注文": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "輸出フラグ_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "輸出フラグ パラメーター": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "輸出フラグ_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.8613
+			          }
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター.輸出フラグ_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "輸出フラグ_パラメーター",
+			          "ConceptualProperty": "輸出フラグ_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "輸出フラグ パラメーター": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "輸出フラグ_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター.輸出フラグ_パラメーター_フィールド": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "輸出フラグ_パラメーター",
+			          "ConceptualProperty": "輸出フラグ_パラメーター フィールド"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "輸出フラグ_パラメーター フィールド": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター.輸出フラグ_パラメーター_注文": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "輸出フラグ_パラメーター",
+			          "ConceptualProperty": "輸出フラグ_パラメーター 注文"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "輸出フラグ_パラメーター 注文": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "コード_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "コード_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "コード パラメーター": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "コード_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.8613
+			          }
+			        }
+			      ]
+			    },
+			    "コード_パラメーター.コード_パラメーター": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "コード_パラメーター",
+			          "ConceptualProperty": "コード_パラメーター"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "コード パラメーター": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "コード_パラメーター": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "コード_パラメーター.コード_パラメーター_フィールド": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "コード_パラメーター",
+			          "ConceptualProperty": "コード_パラメーター フィールド"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "コード_パラメーター フィールド": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "コード_パラメーター.コード_パラメーター_注文": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "コード_パラメーター",
+			          "ConceptualProperty": "コード_パラメーター 注文"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "コード_パラメーター 注文": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "コード_パラメーター.集約単位": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "コード_パラメーター",
+			          "ConceptualProperty": "集約単位"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "集約単位": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "main_query_入荷検収時間_日_in_main_query_入荷検収時間_月": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.日": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日"
+			          }
+			        },
+			        "main_query.入荷検収時間.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日_are_in_月"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.月"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.日"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_have_日"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日_have_月"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_月_in_main_query_入荷検収時間_四半期": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.月"
+			          }
+			        },
+			        "main_query.入荷検収時間.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.四半期"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.月"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_are_in_四半期"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_have_月"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.月"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_have_四半期"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_四半期_in_main_query_入荷検収時間_年": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.四半期"
+			          }
+			        },
+			        "main_query.入荷検収時間.年": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.年"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_are_in_年"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.年"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "年_have_四半期"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_have_年"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_日_in_main_query_入荷予定日_月": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.日": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日"
+			          }
+			        },
+			        "main_query.入荷予定日.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷予定日.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日_are_in_月1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.月"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.日"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_have_日1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日_have_月1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_月_in_main_query_入荷予定日_四半期": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.月"
+			          }
+			        },
+			        "main_query.入荷予定日.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.四半期"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.月"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_are_in_四半期1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_have_月1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.月"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "月_have_四半期1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_四半期_in_main_query_入荷予定日_年": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.四半期"
+			          }
+			        },
+			        "main_query.入荷予定日.年": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.年"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "main_query.入荷予定日.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_are_in_年1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.年"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "年_have_四半期1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "四半期_have_年1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_日付の階層_has_main_query_入荷検収時間_日": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日付の階層"
+			          }
+			        },
+			        "main_query.入荷検収時間.日": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.日"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_日"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_日付の階層_has_main_query_入荷検収時間_月": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日付の階層"
+			          }
+			        },
+			        "main_query.入荷検収時間.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_月"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_日付の階層_has_main_query_入荷検収時間_四半期": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日付の階層"
+			          }
+			        },
+			        "main_query.入荷検収時間.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.四半期"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_四半期"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_日付の階層_has_main_query_入荷検収時間_年": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日付の階層"
+			          }
+			        },
+			        "main_query.入荷検収時間.年": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.年"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_年"
+			        }
+			      ]
+			    },
+			    "main_query_入荷検収時間_has_日付の階層": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷検収時間": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間"
+			          }
+			        },
+			        "main_query.入荷検収時間.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間.日付の階層"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷検収時間"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間.日付の階層"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "入荷検収時間_have_日付の階層"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_日付の階層_has_main_query_入荷予定日_日": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日付の階層"
+			          }
+			        },
+			        "main_query.入荷予定日.日": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.日"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_日1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_日付の階層_has_main_query_入荷予定日_月": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日付の階層"
+			          }
+			        },
+			        "main_query.入荷予定日.月": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.月"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.月"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_月1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_日付の階層_has_main_query_入荷予定日_四半期": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日付の階層"
+			          }
+			        },
+			        "main_query.入荷予定日.四半期": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.四半期"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.四半期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_四半期1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_日付の階層_has_main_query_入荷予定日_年": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日付の階層"
+			          }
+			        },
+			        "main_query.入荷予定日.年": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.年"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日.日付の階層"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.年"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "日付の階層_have_年1"
+			        }
+			      ]
+			    },
+			    "main_query_入荷予定日_has_日付の階層": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query.入荷予定日": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日"
+			          }
+			        },
+			        "main_query.入荷予定日.日付の階層": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日.日付の階層"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query.入荷予定日"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日.日付の階層"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "入荷予定日_have_日付の階層"
+			        }
+			      ]
+			    },
+			    "コード_パラメーター_has_輸出フラグ_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "コード_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        },
+			        "輸出フラグ_パラメーター": {
+			          "Target": {
+			            "Entity": "輸出フラグ_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "コード_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "輸出フラグ_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "コード_パラメーター_have_輸出フラグ_パラメーター"
+			        }
+			      ]
+			    },
+			    "コード_パラメーター_has_名称_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "コード_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        },
+			        "名称_パラメーター": {
+			          "Target": {
+			            "Entity": "名称_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "コード_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "名称_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "コード_パラメーター_have_名称_パラメーター"
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター_has_コード_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "輸出フラグ_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "輸出フラグ_パラメーター": {
+			          "Target": {
+			            "Entity": "輸出フラグ_パラメーター"
+			          }
+			        },
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "輸出フラグ_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "コード_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "輸出フラグ_パラメーター_have_コード_パラメーター"
+			        }
+			      ]
+			    },
+			    "名称_パラメーター_has_コード_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "名称_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "名称_パラメーター": {
+			          "Target": {
+			            "Entity": "名称_パラメーター"
+			          }
+			        },
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "名称_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "コード_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "名称_パラメーター_have_コード_パラメーター"
+			        }
+			      ]
+			    },
+			    "コード_パラメーター_has_集約単位": {
+			      "Binding": {
+			        "ConceptualEntity": "コード_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        },
+			        "コード_パラメーター.集約単位": {
+			          "Target": {
+			            "Entity": "コード_パラメーター.集約単位"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "コード_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "コード_パラメーター.集約単位"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "コード_パラメーター_have_集約単位"
+			        }
+			      ]
+			    },
+			    "コード_パラメーター_has_コード_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "コード_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター"
+			          }
+			        },
+			        "コード_パラメーター.コード_パラメーター": {
+			          "Target": {
+			            "Entity": "コード_パラメーター.コード_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "コード_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "コード_パラメーター.コード_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "コード_パラメーター_have_コード_パラメーター"
+			        }
+			      ]
+			    },
+			    "輸出フラグ_パラメーター_has_輸出フラグ_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "輸出フラグ_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "輸出フラグ_パラメーター": {
+			          "Target": {
+			            "Entity": "輸出フラグ_パラメーター"
+			          }
+			        },
+			        "輸出フラグ_パラメーター.輸出フラグ_パラメーター": {
+			          "Target": {
+			            "Entity": "輸出フラグ_パラメーター.輸出フラグ_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "輸出フラグ_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "輸出フラグ_パラメーター.輸出フラグ_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "輸出フラグ_パラメーター_have_輸出フラグ_パラメーター"
+			        }
+			      ]
+			    },
+			    "名称_パラメーター_has_名称_パラメーター": {
+			      "Binding": {
+			        "ConceptualEntity": "名称_パラメーター"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "名称_パラメーター": {
+			          "Target": {
+			            "Entity": "名称_パラメーター"
+			          }
+			        },
+			        "名称_パラメーター.名称_パラメーター": {
+			          "Target": {
+			            "Entity": "名称_パラメーター.名称_パラメーター"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "名称_パラメーター"
+			            },
+			            "Object": {
+			              "Role": "名称_パラメーター.名称_パラメーター"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "名称_パラメーター_have_名称_パラメーター"
+			        }
+			      ]
+			    },
+			    "main_query_has_総件数_メイン": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.総件数_メイン": {
+			          "Target": {
+			            "Entity": "main_query.総件数_メイン"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.総件数_メイン"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_総件数_メイン"
+			        }
+			      ]
+			    },
+			    "main_query_has_入庫進捗率": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入庫進捗率": {
+			          "Target": {
+			            "Entity": "main_query.入庫進捗率"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入庫進捗率"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入庫進捗率"
+			        }
+			      ]
+			    },
+			    "main_query_has_入庫残数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入庫残数": {
+			          "Target": {
+			            "Entity": "main_query.入庫残数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入庫残数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入庫残数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入庫実績数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入庫実績数": {
+			          "Target": {
+			            "Entity": "main_query.入庫実績数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入庫実績数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入庫実績数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入庫予定数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入庫予定数": {
+			          "Target": {
+			            "Entity": "main_query.入庫予定数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入庫予定数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入庫予定数"
+			        }
+			      ]
+			    },
+			    "main_query_has_別納数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.別納数": {
+			          "Target": {
+			            "Entity": "main_query.別納数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.別納数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_別納数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷残数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷残数": {
+			          "Target": {
+			            "Entity": "main_query.入荷残数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷残数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷残数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷進捗率": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷進捗率": {
+			          "Target": {
+			            "Entity": "main_query.入荷進捗率"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷進捗率"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷進捗率"
+			        }
+			      ]
+			    },
+			    "main_query_has_出荷不可数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.出荷不可数": {
+			          "Target": {
+			            "Entity": "main_query.出荷不可数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.出荷不可数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_出荷不可数"
+			        }
+			      ]
+			    },
+			    "main_query_has_検収可能入荷予定数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.検収可能入荷予定数": {
+			          "Target": {
+			            "Entity": "main_query.検収可能入荷予定数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.検収可能入荷予定数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_検収可能入荷予定数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷予定数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷予定数": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷予定数"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷実績数": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷実績数": {
+			          "Target": {
+			            "Entity": "main_query.入荷実績数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷実績数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷実績数"
+			        }
+			      ]
+			    },
+			    "main_query_has_selectedvalue_コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.selectedvalue_コード": {
+			          "Target": {
+			            "Entity": "main_query.selectedvalue_コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.selectedvalue_コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_selectedvalue_コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_最終更新日時": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.最終更新日時": {
+			          "Target": {
+			            "Entity": "main_query.最終更新日時"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.最終更新日時"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_最終更新日時"
+			        }
+			      ]
+			    },
+			    "main_query_has_データなし_メッセージ_サブ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.データなし_メッセージ_サブ": {
+			          "Target": {
+			            "Entity": "main_query.データなし_メッセージ_サブ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.データなし_メッセージ_サブ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_データなし_メッセージ_サブ"
+			        }
+			      ]
+			    },
+			    "main_query_has_データなし_メッセージ_メイン": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.データなし_メッセージ_メイン": {
+			          "Target": {
+			            "Entity": "main_query.データなし_メッセージ_メイン"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.データなし_メッセージ_メイン"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_データなし_メッセージ_メイン"
+			        }
+			      ]
+			    },
+			    "main_query_has_総件数_サブ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.総件数_サブ": {
+			          "Target": {
+			            "Entity": "main_query.総件数_サブ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.総件数_サブ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_総件数_サブ"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷予定日_計算": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷予定日_計算": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日_計算"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日_計算"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷予定日_計算"
+			        }
+			      ]
+			    },
+			    "main_query_has_列_輸出フラグ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.列_輸出フラグ": {
+			          "Target": {
+			            "Entity": "main_query.列_輸出フラグ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.列_輸出フラグ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_列_輸出フラグ"
+			        }
+			      ]
+			    },
+			    "main_query_has_列_名称": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.列_名称": {
+			          "Target": {
+			            "Entity": "main_query.列_名称"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.列_名称"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_列_名称"
+			        }
+			      ]
+			    },
+			    "main_query_has_列_コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.列_コード": {
+			          "Target": {
+			            "Entity": "main_query.列_コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.列_コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_列_コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_LPNステータス_検索": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.LPNステータス_検索": {
+			          "Target": {
+			            "Entity": "main_query.LPNステータス_検索"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.LPNステータス_検索"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_LPNステータス"
+			        }
+			      ]
+			    },
+			    "main_query_has_別納区分_検索": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.別納区分_検索": {
+			          "Target": {
+			            "Entity": "main_query.別納区分_検索"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.別納区分_検索"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_別納区分_検索"
+			        }
+			      ]
+			    },
+			    "main_query_has_出荷不可フラグ_検索": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.出荷不可フラグ_検索": {
+			          "Target": {
+			            "Entity": "main_query.出荷不可フラグ_検索"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.出荷不可フラグ_検索"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_出荷不可フラグ_検索"
+			        }
+			      ]
+			    },
+			    "main_query_has_ストーク有無_検索": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.ストーク有無_検索": {
+			          "Target": {
+			            "Entity": "main_query.ストーク有無_検索"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.ストーク有無_検索"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_ストーク有無_検索"
+			        }
+			      ]
+			    },
+			    "main_query_has_入庫エリア": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入庫エリア": {
+			          "Target": {
+			            "Entity": "main_query.入庫エリア"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入庫エリア"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入庫エリア"
+			        }
+			      ]
+			    },
+			    "main_query_has_輸出フラグ_区分名": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.輸出フラグ_区分名": {
+			          "Target": {
+			            "Entity": "main_query.輸出フラグ_区分名"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.輸出フラグ_区分名"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_輸出フラグ_区分名"
+			        }
+			      ]
+			    },
+			    "main_query_has_在庫品フラグ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.在庫品フラグ": {
+			          "Target": {
+			            "Entity": "main_query.在庫品フラグ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.在庫品フラグ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_在庫品フラグ"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷種別": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷種別": {
+			          "Target": {
+			            "Entity": "main_query.入荷種別"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷種別"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷種別"
+			        }
+			      ]
+			    },
+			    "main_query_has_ファミリーコード3": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.ファミリーコード3": {
+			          "Target": {
+			            "Entity": "main_query.ファミリーコード3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.ファミリーコード3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_ファミリーコード"
+			        }
+			      ]
+			    },
+			    "main_query_has_タイトル": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.タイトル": {
+			          "Target": {
+			            "Entity": "main_query.タイトル"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.タイトル"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_タイトル"
+			        }
+			      ]
+			    },
+			    "main_query_has_仕入先名": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.仕入先名": {
+			          "Target": {
+			            "Entity": "main_query.仕入先名"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.仕入先名"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_仕入先名"
+			        }
+			      ]
+			    },
+			    "main_query_has_ストーク有無フラグ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.ストーク有無フラグ": {
+			          "Target": {
+			            "Entity": "main_query.ストーク有無フラグ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.ストーク有無フラグ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_ストーク有無フラグ"
+			        }
+			      ]
+			    },
+			    "main_query_has_シューター番号": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.シューター番号": {
+			          "Target": {
+			            "Entity": "main_query.シューター番号"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.シューター番号"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_シューター番号"
+			        }
+			      ]
+			    },
+			    "main_query_has_シューター区分": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.シューター区分": {
+			          "Target": {
+			            "Entity": "main_query.シューター区分"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.シューター区分"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_シューター区分"
+			        }
+			      ]
+			    },
+			    "main_query_has_引渡区分": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.引渡区分": {
+			          "Target": {
+			            "Entity": "main_query.引渡区分"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.引渡区分"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_引渡区分"
+			        }
+			      ]
+			    },
+			    "main_query_has_配送先コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.配送先コード": {
+			          "Target": {
+			            "Entity": "main_query.配送先コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.配送先コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_配送先コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_得意先コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.得意先コード": {
+			          "Target": {
+			            "Entity": "main_query.得意先コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.得意先コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_得意先コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_出荷不可フラグ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.出荷不可フラグ": {
+			          "Target": {
+			            "Entity": "main_query.出荷不可フラグ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.出荷不可フラグ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_出荷不可フラグ"
+			        }
+			      ]
+			    },
+			    "main_query_has_別納フラグ": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.別納フラグ": {
+			          "Target": {
+			            "Entity": "main_query.別納フラグ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.別納フラグ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_別納フラグ"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷担当者": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷担当者": {
+			          "Target": {
+			            "Entity": "main_query.入荷担当者"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷担当者"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷担当者"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷検収時間": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷検収時間": {
+			          "Target": {
+			            "Entity": "main_query.入荷検収時間"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷検収時間"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷検収時間"
+			        }
+			      ]
+			    },
+			    "main_query_has_i_LPN番号": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.i_LPN番号": {
+			          "Target": {
+			            "Entity": "main_query.i_LPN番号"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.i_LPN番号"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_i_LPN番号"
+			        }
+			      ]
+			    },
+			    "main_query_has_総合インナーコード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.総合インナーコード": {
+			          "Target": {
+			            "Entity": "main_query.総合インナーコード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.総合インナーコード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_統合インナーコード"
+			        }
+			      ]
+			    },
+			    "main_query_has_ext_j_m_i_s_asn_type": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.ext_j_m_i_s_asn_type": {
+			          "Target": {
+			            "Entity": "main_query.ext_j_m_i_s_asn_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.ext_j_m_i_s_asn_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_ext_j_m_i_s_asn_types"
+			        }
+			      ]
+			    },
+			    "main_query_has_グローバル番号": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.グローバル番号": {
+			          "Target": {
+			            "Entity": "main_query.グローバル番号"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.グローバル番号"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_グローバル番号"
+			        }
+			      ]
+			    },
+			    "main_query_has_転送箱_no": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.転送箱_no": {
+			          "Target": {
+			            "Entity": "main_query.転送箱_no"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.転送箱_no"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_転送箱_noes"
+			        }
+			      ]
+			    },
+			    "main_query_has_出荷仕分用エリアコード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.出荷仕分用エリアコード": {
+			          "Target": {
+			            "Entity": "main_query.出荷仕分用エリアコード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.出荷仕分用エリアコード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_出荷仕分用エリアコード"
+			        }
+			      ]
+			    },
+			    "main_query_has_商品コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.商品コード": {
+			          "Target": {
+			            "Entity": "main_query.商品コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.商品コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_商品コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_仕入先コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.仕入先コード": {
+			          "Target": {
+			            "Entity": "main_query.仕入先コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.仕入先コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_仕入先コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_置場コード": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.置場コード": {
+			          "Target": {
+			            "Entity": "main_query.置場コード"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.置場コード"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_置場コード"
+			        }
+			      ]
+			    },
+			    "main_query_has_入荷予定日": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.入荷予定日": {
+			          "Target": {
+			            "Entity": "main_query.入荷予定日"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.入荷予定日"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_入荷予定日"
+			        }
+			      ]
+			    },
+			    "main_query_has_ASNステータス": {
+			      "Binding": {
+			        "ConceptualEntity": "MainQuery"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "main_query": {
+			          "Target": {
+			            "Entity": "main_query"
+			          }
+			        },
+			        "main_query.ASNステータス": {
+			          "Target": {
+			            "Entity": "main_query.ASNステータス"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "main_query"
+			            },
+			            "Object": {
+			              "Role": "main_query.ASNステータス"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "main_queries_have_ASNステータス"
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.62\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "97e3f86839266040fe59",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"106bbdf11ec9b863145d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":119.55441302485004,\"y\":223.75321336760925,\"z\":0,\"width\":228.14053127677806,\"height\":194.13881748071978,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"cr2a6_b1b87344be3e469b8d2af5ff0b36e582.野菜\"},{\"queryRef\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"cr2a6_b1b87344be3e469b8d2af5ff0b36e582\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"値段\"},\"Name\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\",\"NativeReferenceName\":\"値段\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"野菜\"},\"Name\":\"cr2a6_b1b87344be3e469b8d2af5ff0b36e582.野菜\",\"NativeReferenceName\":\"野菜\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 194.14,
+          "width": 228.14,
+          "x": 119.55,
+          "y": 223.75,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"7ac0ad0175aae3d37172\",\"layouts\":[{\"id\":0,\"position\":{\"x\":938.8860325621251,\"y\":234.72150814053128,\"z\":2,\"width\":228.14053127677806,\"height\":193.04198800342758,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"cr2a6_b1b87344be3e469b8d2af5ff0b36e582\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"値段\"}},\"Function\":0},\"Name\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\",\"NativeReferenceName\":\"値段 の合計\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"値段\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 193.04,
+          "width": 228.14,
+          "x": 938.89,
+          "y": 234.72,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"bd0826dd5382e981be55\",\"layouts\":[{\"id\":0,\"position\":{\"x\":463.95886889460155,\"y\":248.9802913453299,\"z\":1,\"width\":228.14053127677806,\"height\":193.04198800342758,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"cr2a6_b1b87344be3e469b8d2af5ff0b36e582\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"値段\"}},\"Function\":0},\"Name\":\"Sum(cr2a6_b1b87344be3e469b8d2af5ff0b36e582.値段)\",\"NativeReferenceName\":\"値段 の合計\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"値段\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 193.04,
+          "width": 228.14,
+          "x": 463.96,
+          "y": 248.98,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
