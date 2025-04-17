@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Azure Map"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a1be26bd-073e-95b5-445c-156e4690e8b5"
+  }
+}
