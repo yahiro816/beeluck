@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "32688f93979421d5d53a",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a697ab40e2d9357e9e01\",\"layouts\":[{\"id\":0,\"position\":{\"x\":111.85410334346506,\"y\":146.8693009118541,\"z\":0,\"width\":756.7173252279636,\"height\":489.2401215805471,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"野菜.field_2\",\"active\":true},{\"queryRef\":\"野菜.field_3\"}],\"Columns\":[{\"queryRef\":\"野菜.field_1\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"野\",\"Entity\":\"野菜\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"野\"}},\"Property\":\"field_2\"},\"Name\":\"野菜.field_2\",\"NativeReferenceName\":\"field_2\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"野\"}},\"Property\":\"field_1\"},\"Name\":\"野菜.field_1\",\"NativeReferenceName\":\"field_1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"野\"}},\"Property\":\"field_3\"},\"Name\":\"野菜.field_3\",\"NativeReferenceName\":\"field_3\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 489.24,
+          "width": 756.72,
+          "x": 111.85,
+          "y": 146.87,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+table 野菜
+	lineageTag: 0fcad833-4b1d-41eb-984f-12005da2eaf1
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 7b72246c-122e-482b-b58d-b3879219265b
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 7f871335-0db8-4050-bc91-70233dbecf0c
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 9d6aa8fd-a400-4bab-83e8-0750ced736bb
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 32ae0a2b-c393-4b58-a92c-8565d8ccfc9e
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: b96b5438-6697-4fcc-bd10-d1753b63b8a5
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: ef159613-7b93-4203-9f3b-10d983296931
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: bb25dfdc-85a4-47d6-8f1d-70d72a2f31c3
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: d3cb3570-b9d8-414f-a4af-dd14a06c84b9
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_1
+		dataType: string
+		lineageTag: 97801849-8cf8-43e5-9b91-b4905c7c0daa
+		summarizeBy: none
+		sourceColumn: field_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_2
+		dataType: string
+		lineageTag: d17600d0-a226-4197-8ccb-ea02b874a7c1
+		summarizeBy: none
+		sourceColumn: field_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_3
+		dataType: string
+		lineageTag: 082d7088-1f03-441d-8018-3fc8fed9ae1d
+		summarizeBy: none
+		sourceColumn: field_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: a679c1a6-f3a4-491c-ad85-42647bb50b44
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 542ecdc4-6ade-4cbc-862c-916cecab25c6
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: bbd57ea9-f609-4779-b602-f1e3fc63cbd3
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 6609fbff-deb4-4b8a-866a-a2deab8c93ca
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: d885301d-29d5-4448-b49b-3d6dd94c6db1
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 265a23ce-bddb-4bb6-bdab-b191f75447ee
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 1ca9935a-ed7e-469f-9489-ebf5596ce5d3
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 6bcf0c88-e584-4aa5-848c-47a93b5a1636
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 野菜 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://mngenvmcap820421.sharepoint.com/sites/test", [ApiVersion = 15]),
+				    #"828d9d3e-153e-4cd3-8f60-863c9517ccd0" = Source{[Id="828d9d3e-153e-4cd3-8f60-863c9517ccd0"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"828d9d3e-153e-4cd3-8f60-863c9517ccd0",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

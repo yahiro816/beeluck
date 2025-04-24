@@ -1,0 +1,162 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "ttt",
+        "sourceLineageTag": "[dbo].[ttt]",
+        "columns": [
+          {
+            "name": "Source.Name",
+            "dataType": "string",
+            "sourceColumn": "Source.Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Source.Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "time",
+            "dataType": "dateTime",
+            "sourceColumn": "time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "a",
+            "dataType": "int64",
+            "sourceColumn": "a",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "a",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "b",
+            "dataType": "int64",
+            "sourceColumn": "b",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "b",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "c",
+            "dataType": "int64",
+            "sourceColumn": "c",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "c",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "d",
+            "dataType": "int64",
+            "sourceColumn": "d",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "d",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "e",
+            "dataType": "int64",
+            "sourceColumn": "e",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "e",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ttt",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

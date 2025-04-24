@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "DataPipeline",
-    "displayName": "pipeline4"
+    "displayName": "フォルダー test"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "1f85b9f7-449d-9bc6-4a3d-ad5f578980a0"
+    "logicalId": "8ef328ed-0fca-bb41-401e-c36a63f17f86"
   }
 }

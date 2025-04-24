@@ -5,6 +5,6 @@ shared uta = let
   #"ナビゲーション 1" = ソース{[Name = "uta", Kind = "Database"]}[Data],
   #"ナビゲーション 2" = #"ナビゲーション 1"{[Name = "uta", Kind = "Schema"]}[Data],
   #"ナビゲーション 3" = #"ナビゲーション 2"{[Name = "uta", Kind = "Table"]}[Data],
-  削除された空白行 = Table.SelectRows(#"ナビゲーション 3", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+  #"Filtered rows" = Table.SelectRows(#"ナビゲーション 3", each ([Properlyregistered_favorite_color] = "red"))
 in
-  削除された空白行;
+  #"Filtered rows";

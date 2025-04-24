@@ -1,0 +1,18 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["野菜"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.141.1754.0 (25.03)+e4409ed908ce97a5e9747f7dc48da475cf1c71a2
+
+ref table 野菜
+
+ref cultureInfo ja-JP
+
