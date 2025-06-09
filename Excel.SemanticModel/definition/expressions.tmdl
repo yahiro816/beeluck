@@ -1,0 +1,7 @@
+expression 1 = 23 meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 4ace2ea2-a610-4a4d-8018-ccbc2d43e2a4
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Number
+

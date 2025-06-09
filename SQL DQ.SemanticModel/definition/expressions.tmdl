@@ -1,0 +1,7 @@
+expression パラメーター1 = 1 meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 7ab2c51f-20c5-485e-bd9a-042a09ce1022
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Number
+
