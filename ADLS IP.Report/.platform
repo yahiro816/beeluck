@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ADLS IP"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f0cc6c60-6cb1-b85b-492c-ad527a53de2b"
+  }
+}

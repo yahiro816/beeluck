@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a9138eafb434caef12a2",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f5c48f24be4f8b036108\",\"layouts\":[{\"id\":0,\"position\":{\"x\":157.56838905775078,\"y\":105.04559270516718,\"z\":0,\"width\":591.3677811550152,\"height\":373.4954407294833,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(クエリ1.changeNumber)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"ク\",\"Entity\":\"クエリ1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"changeNumber\"},\"Name\":\"Sum(クエリ1.changeNumber)\",\"NativeReferenceName\":\"changeNumber\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 373.50,
+          "width": 591.37,
+          "x": 157.57,
+          "y": 105.05,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
