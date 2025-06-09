@@ -1,0 +1,193 @@
+table c_ZAC外_MOLISサービス
+	isHidden
+	lineageTag: 5132fe3c-7c6d-471b-98a5-2e9f97b138de
+
+	column 'Source.Name'
+		dataType: string
+		isHidden
+		lineageTag: 7185d981-c41b-4287-8717-91368c2821fd
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'JOBNo.'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a26f9549-4729-4fc9-9a00-6c1e2f73b32e
+		summarizeBy: sum
+		sourceColumn: JOBNo.
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ステータス
+		dataType: string
+		isHidden
+		lineageTag: e3d390d8-397c-4a11-a79e-f6cafc31a55e
+		summarizeBy: none
+		sourceColumn: ステータス
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 費目名
+		dataType: string
+		isHidden
+		lineageTag: 534d768c-67cd-47b0-8781-01b9fbf36c7e
+		summarizeBy: none
+		sourceColumn: 費目名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column システム名称名
+		dataType: string
+		isHidden
+		lineageTag: 7edc7a5f-59c5-4676-88b0-94ba25272a3d
+		summarizeBy: none
+		sourceColumn: システム名称名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先部門名
+		dataType: string
+		isHidden
+		lineageTag: 22553a5f-b8c7-4c70-9011-f408e65b9b6e
+		summarizeBy: none
+		sourceColumn: 得意先部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント2親
+		dataType: string
+		isHidden
+		lineageTag: 63bb8b20-199e-4ca4-b9c6-1c5543c69fa2
+		summarizeBy: none
+		sourceColumn: 事業セグメント2親
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント2
+		dataType: string
+		isHidden
+		lineageTag: 893f8197-78ae-4acd-bbd2-19d320bc5a59
+		summarizeBy: none
+		sourceColumn: 事業セグメント2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 案件名
+		dataType: string
+		isHidden
+		lineageTag: e8978230-0149-4ad5-9a72-759343c86d34
+		summarizeBy: none
+		sourceColumn: 案件名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5階層部門名
+		dataType: string
+		isHidden
+		lineageTag: 15f52f92-df73-4527-aee1-847335d6ce3e
+		summarizeBy: none
+		sourceColumn: 5階層部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 6階層部門名
+		dataType: string
+		isHidden
+		lineageTag: bc2a239c-4909-439a-9bd7-999032a8f310
+		summarizeBy: none
+		sourceColumn: 6階層部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 仕入予定日
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 30755d68-a869-49c2-bcd6-ccd502ecb219
+		summarizeBy: none
+		sourceColumn: 仕入予定日
+
+		variation バリエーション
+			isDefault
+			relationship: 616762a0-8f66-4772-8782-b9030bbc8e72
+			defaultHierarchy: LocalDateTable_bc9a5be6-2893-40eb-9975-0fcb09e3061d.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 予定原価
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 41146dcd-b146-405a-8398-b49c9f2ea715
+		summarizeBy: sum
+		sourceColumn: 予定原価
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業領域
+		dataType: string
+		lineageTag: 80f9b56e-cd25-448d-a24c-3ce94384e594
+		summarizeBy: none
+		sourceColumn: 事業領域
+
+		annotation SummarizationSetBy = Automatic
+
+	column 取引パートナ
+		dataType: string
+		lineageTag: a364a961-b302-4712-be84-9441003da3c0
+		summarizeBy: none
+		sourceColumn: 取引パートナ
+
+		annotation SummarizationSetBy = Automatic
+
+	partition c_ZAC外_MOLISサービス = m
+		mode: import
+		source =
+				let
+				    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\c_ZAC外_MOLISサービス"),
+				    #"フィルター選択された非表示の File1" = Table.SelectRows(ソース, each [Attributes]?[Hidden]? <> true),
+				    カスタム関数の呼び出し1 = Table.AddColumn(#"フィルター選択された非表示の File1", "ファイルの変換 (15)", each #"ファイルの変換 (15)"([Content])),
+				    #"名前が変更された列 1" = Table.RenameColumns(カスタム関数の呼び出し1, {"Name", "Source.Name"}),
+				    削除された他の列1 = Table.SelectColumns(#"名前が変更された列 1", {"Source.Name", "ファイルの変換 (15)"}),
+				    展開されたテーブル列1 = Table.ExpandTableColumn(削除された他の列1, "ファイルの変換 (15)", Table.ColumnNames(#"ファイルの変換 (15)"(#"サンプル ファイル (15)"))),
+				    変更された型 = Table.TransformColumnTypes(展開されたテーブル列1,{{"Source.Name", type text}, {"ステータス", type text}, {"JOBNo.", Int64.Type}, {"システム名称名", type text}, {"事業セグメント2親", type text}, {"事業セグメント2", type text}, {"費目名", type text}, {"得意先部門名", type text}, {"5階層部門名", type text}, {"6階層部門名", type text}, {"仕入予定日", type date}, {"予定原価", Int64.Type}, {"案件名", type text}, {"事業領域", type any}, {"取引パートナ", type any}})
+				in
+				    変更された型
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

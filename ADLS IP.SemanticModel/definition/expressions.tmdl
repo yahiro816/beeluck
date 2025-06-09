@@ -1,0 +1,51 @@
+expression 'サンプル ファイル' =
+		let
+		    ソース = AzureStorage.DataLake("https://ipselect.dfs.core.windows.net/"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 2c6f60d7-a182-4b7a-ae79-2dcc7315b33c
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター1 = #"サンプル ファイル" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 9ad9632b-b372-437b-b510-2afec72235c5
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換' =
+		let
+		    ソース = Json.Document(パラメーター1),
+		    テーブルに変換済み = Table.FromRecords({ソース}),
+		    #"展開された values" = Table.ExpandListColumn(テーブルに変換済み, "values"),
+		    #"展開された values1" = Table.ExpandRecordColumn(#"展開された values", "values", {"name", "id", "properties"}, {"values.name", "values.id", "values.properties"}),
+		    #"展開された values.properties" = Table.ExpandRecordColumn(#"展開された values1", "values.properties", {"changeNumber", "region", "regionId", "platform", "systemService", "addressPrefixes", "networkFeatures"}, {"values.properties.changeNumber", "values.properties.region", "values.properties.regionId", "values.properties.platform", "values.properties.systemService", "values.properties.addressPrefixes", "values.properties.networkFeatures"}),
+		    変更された型 = Table.TransformColumnTypes(#"展開された values.properties",{{"changeNumber", Int64.Type}, {"cloud", type text}, {"values.name", type text}, {"values.id", type text}, {"values.properties.changeNumber", Int64.Type}, {"values.properties.region", type any}, {"values.properties.regionId", Int64.Type}, {"values.properties.platform", type text}, {"values.properties.systemService", type text}, {"values.properties.addressPrefixes", type any}, {"values.properties.networkFeatures", type any}})
+		in
+		    変更された型
+	lineageTag: e23f6171-84ac-4c5e-9185-443432cfc9b5
+	queryGroup: 'クエリ1 からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression ファイルの変換 =
+		let
+		    ソース = (パラメーター1) => let
+		        ソース = Json.Document(パラメーター1),
+		        テーブルに変換済み = Table.FromRecords({ソース}),
+		        #"展開された values" = Table.ExpandListColumn(テーブルに変換済み, "values"),
+		        #"展開された values1" = Table.ExpandRecordColumn(#"展開された values", "values", {"name", "id", "properties"}, {"values.name", "values.id", "values.properties"}),
+		        #"展開された values.properties" = Table.ExpandRecordColumn(#"展開された values1", "values.properties", {"changeNumber", "region", "regionId", "platform", "systemService", "addressPrefixes", "networkFeatures"}, {"values.properties.changeNumber", "values.properties.region", "values.properties.regionId", "values.properties.platform", "values.properties.systemService", "values.properties.addressPrefixes", "values.properties.networkFeatures"}),
+		        変更された型 = Table.TransformColumnTypes(#"展開された values.properties",{{"changeNumber", Int64.Type}, {"cloud", type text}, {"values.name", type text}, {"values.id", type text}, {"values.properties.changeNumber", Int64.Type}, {"values.properties.region", type any}, {"values.properties.regionId", Int64.Type}, {"values.properties.platform", type text}, {"values.properties.systemService", type text}, {"values.properties.addressPrefixes", type any}, {"values.properties.networkFeatures", type any}})
+		    in
+		        変更された型
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換""}" ]
+	lineageTag: 2c418686-3de6-4046-928d-2e5467d3a3d0
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+

@@ -1,0 +1,583 @@
+expression 'サンプル ファイル' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\OneDrive - MOLGROUP.COM\【OneDrive】BI\形式一緒")
+		in
+		    ソース
+	lineageTag: 903d28d6-5e66-48d8-bb3e-1c754c2bcc7c
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+expression パラメーター1 = #"サンプル ファイル" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 8b4fd043-7a87-4325-a82f-8f5d375c26cd
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+expression ファイルの変換 =
+		let
+		    ソース = (パラメーター1 as binary) => let
+		    ソース = Csv.Document(パラメーター1,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None])
+		    in
+		        ソース
+		in
+		    ソース
+	lineageTag: 9bbbcbc0-cdb1-4ac2-9ad6-f835b6fc4ce5
+
+	annotation PBI_ResultType = Function
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+expression 'サンプル ファイル (5)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 7bc4fc4a-e496-432d-aae4-fc7cd701e1c3
+	queryGroup: 'a_MOL直 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター5 = #"サンプル ファイル (5)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (5)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 10501a83-9e29-447b-8b7c-169feace12ea
+	queryGroup: 'a_MOL直 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'ファイルの変換 (5)' =
+		let
+		    ソース = (パラメーター5 as binary) => let
+		    ソース = Csv.Document(パラメーター5,[Delimiter=",", Columns=49, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	lineageTag: 03b59d4b-67be-4c86-9295-3f033fc4a690
+	queryGroup: 'a_MOL直 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (6)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\b_MOLIS"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: ce5c6dee-978a-4b1f-923b-f569abc72448
+	queryGroup: 'b_MOLIS からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター6 = #"サンプル ファイル (6)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (6)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 76d18c22-b2d1-413c-ad09-39cfb15e9d13
+	queryGroup: 'b_MOLIS からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (6)' =
+		let
+		    ソース = Csv.Document(パラメーター6,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 28fa68a1-f35f-45e9-8c8f-585526ed2ecc
+	queryGroup: 'b_MOLIS からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (6)' =
+		let
+		    ソース = (パラメーター6 as binary) => let
+		    ソース = Csv.Document(パラメーター6,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (6)""}" ]
+	lineageTag: 1b89cc59-be17-451b-8b4b-ab93dca4fc70
+	queryGroup: 'b_MOLIS からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (7)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\c_ZAC外_MOLISサービス"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 6eee1db6-3d63-4f29-b63d-81d8484ee04d
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター7 = #"サンプル ファイル (7)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (7)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: fca1fac2-44b1-4749-8002-479eed03ba5f
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (7)' =
+		let
+		    ソース = Csv.Document(パラメーター7,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 5c12f7c5-6c59-41f6-a43a-9f672628ff6a
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (7)' =
+		let
+		    ソース = (パラメーター7 as binary) => let
+		    ソース = Csv.Document(パラメーター7,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (7)""}" ]
+	lineageTag: ddcdecce-48fc-4f2a-95fd-daf4d83e8e0c
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (8)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: d3343165-6caa-4299-9f0d-cf71463e329d
+	queryGroup: 'ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター8 = #"サンプル ファイル (8)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (8)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: dc7821f3-12d9-4d6d-a35d-58332f666963
+	queryGroup: 'ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'ファイルの変換 (8)' =
+		let
+		    ソース = (パラメーター8 as binary) => let
+		    ソース = Csv.Document(パラメーター8,[Delimiter=",", Columns=49, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	lineageTag: a1c50d34-93fe-4fdc-b7b0-b854d250c4d0
+	queryGroup: 'ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (9)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 43ff8698-04c4-433a-ac54-3e2b5f8ef494
+	queryGroup: 'a_MOL直 からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター9 = #"サンプル ファイル (9)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (9)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: a1aca12b-f809-4758-b99a-88f28b793f93
+	queryGroup: 'a_MOL直 からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (9)' =
+		let
+		    ソース = Csv.Document(パラメーター9,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 72f94daf-a4ff-4d31-bc27-a2f965495011
+	queryGroup: 'a_MOL直 からファイルを変換する (3)'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (9)' =
+		let
+		    ソース = (パラメーター9 as binary) => let
+		    ソース = Csv.Document(パラメーター9,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (9)""}" ]
+	lineageTag: d2c9ba53-56d1-40ec-b1cb-de8b265d4e15
+	queryGroup: 'a_MOL直 からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (10)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOLIS 業務部 - 15_MOL経理\04_管理会計\03_予算\115_MOLシステム関係費PowerBI\FY2024\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 17bde23d-f837-47fa-90a8-b6bc397fd0fe
+	queryGroup: 'a_MOL直 からファイルを変換する (4)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター10 = #"サンプル ファイル (10)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (10)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 22ee73e1-3e45-42aa-a1ab-8d29b38fc0e4
+	queryGroup: 'a_MOL直 からファイルを変換する (4)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (10)' =
+		let
+		    ソース = Csv.Document(パラメーター10,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 9fddf41a-0b88-4476-be13-efc67248058c
+	queryGroup: 'a_MOL直 からファイルを変換する (4)'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (10)' =
+		let
+		    ソース = (パラメーター10 as binary) => let
+		    ソース = Csv.Document(パラメーター10,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (10)""}" ]
+	lineageTag: d6ffcc71-7f9e-4944-8238-78c8430139ce
+	queryGroup: 'a_MOL直 からファイルを変換する (4)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (3)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 5989e692-6382-4cd8-99e0-c856dda66577
+	queryGroup: 'a_MOL直 (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター3 = #"サンプル ファイル (3)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (3)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: c47f1178-f0a3-4d23-bac1-5499b2b64b1a
+	queryGroup: 'a_MOL直 (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (2)' =
+		let
+		    ソース = Csv.Document(パラメーター3,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: b821db2b-6478-42e6-a332-0513e436b283
+	queryGroup: 'a_MOL直 (2) からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (3)' =
+		let
+		    ソース = (パラメーター3 as binary) => let
+		    ソース = Csv.Document(パラメーター3,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (2)""}" ]
+	lineageTag: 5ee722f8-2cd7-4cf5-85ce-72a008e75aea
+	queryGroup: 'a_MOL直 (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (4)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\a_MOL直"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 1240c57c-410d-4938-b2b2-3d9e701e4d5b
+	queryGroup: 'a_MOL直 からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター4 = #"サンプル ファイル (4)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (4)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: e13bb15c-2609-4e25-831c-442bbe399b95
+	queryGroup: 'a_MOL直 からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (3)' =
+		let
+		    ソース = Csv.Document(パラメーター4,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 983d525f-9e2c-4967-87e2-c910822a1690
+	queryGroup: 'a_MOL直 からファイルを変換する (2)'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (4)' =
+		let
+		    ソース = (パラメーター4 as binary) => let
+		    ソース = Csv.Document(パラメーター4,[Delimiter=",", Columns=50, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (3)""}" ]
+	lineageTag: 94c3a1ed-e691-4026-8755-61615eb0c024
+	queryGroup: 'a_MOL直 からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (11)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\b_MOLIS"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: eefc9efc-16b8-46a1-aa1f-00effd132e67
+	queryGroup: 'b_MOLIS (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター11 = #"サンプル ファイル (11)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (11)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 0ca798fd-7306-48c1-a8b4-96ab38675377
+	queryGroup: 'b_MOLIS (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (4)' =
+		let
+		    ソース = Csv.Document(パラメーター11,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: a8bcf257-dc12-49e4-ae03-e780b72d8282
+	queryGroup: 'b_MOLIS (2) からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (11)' =
+		let
+		    ソース = (パラメーター11 as binary) => let
+		    ソース = Csv.Document(パラメーター11,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (4)""}" ]
+	lineageTag: 46977b36-c552-4e4e-a0e6-6ce6c949852e
+	queryGroup: 'b_MOLIS (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (12)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\b_MOLIS"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 59f8fe81-b699-496c-b921-5f1679787643
+	queryGroup: 'b_MOLIS からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター12 = #"サンプル ファイル (12)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (12)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 4eb0d459-5dbd-4f75-bf97-4b96018490c5
+	queryGroup: 'b_MOLIS からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (5)' =
+		let
+		    ソース = Csv.Document(パラメーター12,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: 43dcc023-0371-46fe-89af-e43ea2d92fbb
+	queryGroup: 'b_MOLIS からファイルを変換する (2)'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (12)' =
+		let
+		    ソース = (パラメーター12 as binary) => let
+		    ソース = Csv.Document(パラメーター12,[Delimiter=",", Columns=33, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (5)""}" ]
+	lineageTag: 4e1b7ad6-e89c-473e-bec9-084614c55c22
+	queryGroup: 'b_MOLIS からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (13)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\c_ZAC外_MOLISサービス"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: a243b714-0a30-45c0-b5c5-5e58bf1b8d4d
+	queryGroup: 'c_ZAC外_MOLISサービス (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター13 = #"サンプル ファイル (13)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (13)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 2e5d2837-c5a7-4011-a1b4-8f2f6c71971d
+	queryGroup: 'c_ZAC外_MOLISサービス (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (8)' =
+		let
+		    ソース = Csv.Document(パラメーター13,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: f7e763df-9fcc-484b-add2-b941840ad0e6
+	queryGroup: 'c_ZAC外_MOLISサービス (2) からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (13)' =
+		let
+		    ソース = (パラメーター13 as binary) => let
+		    ソース = Csv.Document(パラメーター13,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (8)""}" ]
+	lineageTag: e6add910-a3b6-4560-b6ec-f0125b851fee
+	queryGroup: 'c_ZAC外_MOLISサービス (2) からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression 'サンプル ファイル (14)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025\接続先\c_ZAC外_MOLISサービス"),
+		    ナビゲーション1 = ソース{0}[Content]
+		in
+		    ナビゲーション1
+	lineageTag: 325872b7-38b2-48f6-8089-34b8989fb505
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression パラメーター14 = #"サンプル ファイル (14)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (14)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 59dc22db-2839-41eb-915f-676e7d4e61c6
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (11)' =
+		let
+		    ソース = Csv.Document(パラメーター14,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: a4dcba1b-ae37-4e9d-b0e3-7454c41a0f2a
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (2)'
+
+	annotation PBI_ResultType = Table
+
+expression 'ファイルの変換 (14)' =
+		let
+		    ソース = (パラメーター14 as binary) => let
+		    ソース = Csv.Document(パラメーター14,[Delimiter=",", Columns=12, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (11)""}" ]
+	lineageTag: cc49b08e-bece-437e-8cf7-53734e8f954d
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (2)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+
+expression パラメーター15 = #"サンプル ファイル (15)" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル (15)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 7e494f51-580f-452e-b1f2-63f0ea61eb30
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換 (12)' =
+		let
+		    ソース = Csv.Document(パラメーター15,[Delimiter=",", Columns=14, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+	lineageTag: c75fc77e-0535-418e-8783-1433a9aecc27
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (3)'
+
+	annotation PBI_ResultType = Table
+
+expression 'サンプル ファイル (15)' =
+		let
+		    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\c_ZAC外_MOLISサービス"),
+		    #"C:\Users\HAGIWARAMari-Ism\MOLGROUP COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\c_ZAC外_MOLISサービス\_(FY2024_1H_accounting actual)_SURF_ML03_r(取引先あり) csv" = ソース{[#"Folder Path"="C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\c_ZAC外_MOLISサービス\",Name="(FY2024_1H_accounting actual)_SURF_ML03_r(取引先あり).csv"]}[Content]
+		in
+		    #"C:\Users\HAGIWARAMari-Ism\MOLGROUP COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\c_ZAC外_MOLISサービス\_(FY2024_1H_accounting actual)_SURF_ML03_r(取引先あり) csv"
+	lineageTag: 1742dfea-2ecb-40c3-b296-2479b51ef429
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Binary
+
+expression 'ファイルの変換 (15)' =
+		let
+		    ソース = (パラメーター15 as binary) => let
+		    ソース = Csv.Document(パラメーター15,[Delimiter=",", Columns=14, Encoding=932, QuoteStyle=QuoteStyle.None]),
+		    昇格されたヘッダー数 = Table.PromoteHeaders(ソース, [PromoteAllScalars=true])
+		in
+		    昇格されたヘッダー数
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換 (12)""}" ]
+	lineageTag: c1808b77-7746-461a-8acd-cabd92b3cde5
+	queryGroup: 'c_ZAC外_MOLISサービス からファイルを変換する (3)\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+

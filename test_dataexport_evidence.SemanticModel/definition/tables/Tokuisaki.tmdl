@@ -1,0 +1,52 @@
+table Tokuisaki
+	lineageTag: f4b724d0-93f5-4702-8aa1-f2c9fd969650
+
+	column 'tokuisaki order'
+		dataType: double
+		lineageTag: 60b19005-8b7b-4d57-8827-f2c3ad5ed157
+		summarizeBy: none
+		sourceColumn: tokuisaki order
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'tokuisaki code'
+		dataType: string
+		lineageTag: df12e722-b5a2-4888-9689-7715f4fcc9ec
+		summarizeBy: none
+		sourceColumn: tokuisaki code
+
+		annotation SummarizationSetBy = Automatic
+
+	column tokuisaki
+		dataType: string
+		lineageTag: d759876c-62ab-4791-819c-240ef06184cd
+		summarizeBy: none
+		sourceColumn: tokuisaki
+
+		annotation SummarizationSetBy = Automatic
+
+	column tokuisaki(表示用）
+		dataType: string
+		lineageTag: 53cd81a1-73ad-4d62-a74f-cc3a8464b4e7
+		summarizeBy: none
+		sourceColumn: tokuisaki(表示用）
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tokuisaki = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\マスタ接続先\Master-Data.xlsx"), null, true),
+				    Tokuisaki_Sheet = ソース{[Item="Tokuisaki",Kind="Sheet"]}[Data],
+				    昇格されたヘッダー数 = Table.PromoteHeaders(Tokuisaki_Sheet, [PromoteAllScalars=true]),
+				    変更された型 = Table.TransformColumnTypes(昇格されたヘッダー数,{{"tokuisaki order", type number}, {"tokuisaki code", type any}, {"tokuisaki", type text}, {"tokuisaki(表示用）", type text}})
+				in
+				    変更された型
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = ナビゲーション
+

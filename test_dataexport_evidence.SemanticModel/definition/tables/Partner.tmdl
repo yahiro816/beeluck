@@ -1,0 +1,49 @@
+table Partner
+	lineageTag: 4adba966-24e0-48b5-a8df-2f83d28edbf1
+
+	column 会社コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ba877a7-e492-4a60-ac10-60c699f44bcb
+		summarizeBy: none
+		sourceColumn: 会社コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 取引先コード
+		dataType: string
+		lineageTag: 1b517fc6-d593-4a39-9df8-091d3755e7ad
+		summarizeBy: none
+		sourceColumn: 取引先コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 取引パートナ
+		dataType: string
+		lineageTag: 71a91c02-9866-4974-8b74-534a3c933f49
+		summarizeBy: none
+		sourceColumn: 取引パートナ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先名
+		dataType: string
+		lineageTag: 9e7c3967-0fda-4b16-87a5-6f3223405d8f
+		summarizeBy: none
+		sourceColumn: 得意先名
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partner = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\マスタ接続先\Master-Data.xlsx"), null, true),
+				    Partner_Sheet = ソース{[Item="Partner",Kind="Sheet"]}[Data],
+				    昇格されたヘッダー数 = Table.PromoteHeaders(Partner_Sheet, [PromoteAllScalars=true]),
+				    変更された型 = Table.TransformColumnTypes(昇格されたヘッダー数,{{"会社コード", Int64.Type}, {"取引先コード", type text}, {"取引パートナ", type text}, {"得意先名", type text}})
+				in
+				    変更された型
+
+	annotation PBI_ResultType = Table
+

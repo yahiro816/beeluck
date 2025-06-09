@@ -1,0 +1,494 @@
+table a_MOL直
+	isHidden
+	lineageTag: 97290342-c548-4548-9bd3-8312a3228400
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 539a7a00-184f-4eed-a725-9a919f7f569a
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 修正箇所
+		dataType: string
+		lineageTag: d60e16de-c3ae-4fe6-a23d-a5465277c341
+		summarizeBy: none
+		sourceColumn: 修正箇所
+
+		annotation SummarizationSetBy = Automatic
+
+	column ステータス
+		dataType: string
+		lineageTag: 44496d53-03ea-4c6c-bba6-a712993fe51a
+		summarizeBy: none
+		sourceColumn: ステータス
+
+		annotation SummarizationSetBy = Automatic
+
+	column 予定原価ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2edf0c9e-5043-43d2-bc53-ebdb6d1ecede
+		summarizeBy: count
+		sourceColumn: 予定原価ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 予定原価コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d88fef8-5b32-4885-abf7-a27502837c1e
+		summarizeBy: sum
+		sourceColumn: 予定原価コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'JOBNo.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e90fbe2-1702-4af7-807a-c8f3f1651cfe
+		summarizeBy: sum
+		sourceColumn: JOBNo.
+
+		annotation SummarizationSetBy = Automatic
+
+	column クライアント名
+		dataType: string
+		lineageTag: 39b30021-908f-4369-af7f-e5e8e0ef51c4
+		summarizeBy: none
+		sourceColumn: クライアント名
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOL決裁書番号
+		dataType: string
+		lineageTag: e22a4c66-4785-46a8-ba77-aff06f862e1c
+		summarizeBy: none
+		sourceColumn: MOL決裁書番号
+
+		annotation SummarizationSetBy = Automatic
+
+	column システム名称名
+		dataType: string
+		lineageTag: 64e929e8-be60-4a34-a6bf-559bc7a028f8
+		summarizeBy: none
+		sourceColumn: システム名称名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント2親
+		dataType: string
+		lineageTag: 47483448-5a83-4976-8211-6c2ed633d02e
+		summarizeBy: none
+		sourceColumn: 事業セグメント2親
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント2
+		dataType: string
+		lineageTag: 9ad682df-fc93-4e02-9ca7-f087892c89da
+		summarizeBy: none
+		sourceColumn: 事業セグメント2
+
+		annotation SummarizationSetBy = Automatic
+
+	column メモ
+		dataType: string
+		lineageTag: d8ae62d8-ccc9-40df-b996-caa087954275
+		summarizeBy: none
+		sourceColumn: メモ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 継続有無名
+		dataType: string
+		lineageTag: 9648269b-4780-4068-9837-fe571e611bf9
+		summarizeBy: none
+		sourceColumn: 継続有無名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 営業担当者
+		dataType: string
+		lineageTag: c975a56b-295a-4e23-90bc-8d5cd1d9367b
+		summarizeBy: none
+		sourceColumn: 営業担当者
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先部門コード
+		dataType: int64
+		formatString: 0
+		lineageTag: b09b88d9-19c3-4dfd-8294-48cd7b24e25e
+		summarizeBy: sum
+		sourceColumn: 得意先部門コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先部門名
+		dataType: string
+		lineageTag: 1a27303a-e26c-4352-9149-3292b8a2e18c
+		summarizeBy: none
+		sourceColumn: 得意先部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 案件名
+		dataType: string
+		lineageTag: 44888e0a-6d52-4137-a013-0aa5b9a9e38d
+		summarizeBy: none
+		sourceColumn: 案件名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 案件名カナ
+		dataType: string
+		lineageTag: cc8f347b-c4f7-4cb3-81f7-52b9cf17847e
+		summarizeBy: none
+		sourceColumn: 案件名カナ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 売上項目ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 99491421-e6a6-4798-bbd8-761279a626c9
+		summarizeBy: count
+		sourceColumn: 売上項目ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 予定売上コード
+		dataType: int64
+		formatString: 0
+		lineageTag: dc08b5b1-9f90-4291-bc55-f5bb71182653
+		summarizeBy: sum
+		sourceColumn: 予定売上コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 売上項目名
+		dataType: string
+		lineageTag: aee83fb0-a9cb-448e-91c3-1e04d4052b2c
+		summarizeBy: none
+		sourceColumn: 売上項目名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 売上区分
+		dataType: string
+		lineageTag: f84e2586-8056-4749-a07f-aa1d911b190e
+		summarizeBy: none
+		sourceColumn: 売上区分
+
+		annotation SummarizationSetBy = Automatic
+
+	column 引合日
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 810a6b81-79ef-4249-a131-6c9a175c52da
+		summarizeBy: none
+		sourceColumn: 引合日
+
+		variation バリエーション
+			isDefault
+			relationship: 1aa2ff53-3a32-4814-a7ed-e4b7c0e8c0d5
+			defaultHierarchy: LocalDateTable_5a9c7773-8bc7-423f-9716-a5de1574b3cc.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 受注日
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bc11ea38-22f0-44a5-b47f-6bcd02b6139b
+		summarizeBy: none
+		sourceColumn: 受注日
+
+		variation バリエーション
+			isDefault
+			relationship: 850b8799-26b8-4e06-8dc1-2753ae5e83db
+			defaultHierarchy: LocalDateTable_b394cb5a-24bd-4661-9994-b1d83f00f9b2.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 個別売上(予定)日
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bcaccea0-8e58-4ea5-bad3-db216bb0c5a1
+		summarizeBy: none
+		sourceColumn: 個別売上(予定)日
+
+		variation バリエーション
+			isDefault
+			relationship: d924ce12-7556-44e5-8746-15cfcc09ffb2
+			defaultHierarchy: LocalDateTable_fbcf81fd-a4a1-4cc0-b60d-a05f57fe1745.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 3階層部門コード
+		dataType: int64
+		formatString: 0
+		lineageTag: fbfe775d-03ce-4118-99ec-e9eda0296480
+		summarizeBy: sum
+		sourceColumn: 3階層部門コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 3階層部門名
+		dataType: string
+		lineageTag: 267d7753-0dfc-4ce5-8586-4014170c5ce2
+		summarizeBy: none
+		sourceColumn: 3階層部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 4階層部門コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ec6f73b-6653-44f3-9ef7-3a8845157644
+		summarizeBy: sum
+		sourceColumn: 4階層部門コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 4階層部門名
+		dataType: string
+		lineageTag: ecfb6fcd-fb78-47a8-ae01-6cbdc9a2cb2b
+		summarizeBy: none
+		sourceColumn: 4階層部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5階層部門コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e6f6a55-6b57-40be-8552-bb807e5828f0
+		summarizeBy: sum
+		sourceColumn: 5階層部門コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5階層部門名
+		dataType: string
+		lineageTag: 4db1a2bb-cd40-45ac-bfa2-483cd4bb0f4c
+		summarizeBy: none
+		sourceColumn: 5階層部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 6階層部門コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 7284429b-e3a7-4d91-94ea-b062868a5811
+		summarizeBy: sum
+		sourceColumn: 6階層部門コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 6階層部門名
+		dataType: string
+		lineageTag: fe69fe9a-4475-4867-b860-91e2250cb6a5
+		summarizeBy: none
+		sourceColumn: 6階層部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 支払先コード
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fc0d7e6-fa9a-4190-aa14-16bef951b3d3
+		summarizeBy: sum
+		sourceColumn: 支払先コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 支払先名
+		dataType: string
+		lineageTag: f88ca1d9-d4a9-4d5b-b6ba-8633f633b84f
+		summarizeBy: none
+		sourceColumn: 支払先名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 費目コード
+		dataType: int64
+		formatString: 0
+		lineageTag: a5c4ae0b-675d-424c-82b3-1420e1df615f
+		summarizeBy: sum
+		sourceColumn: 費目コード
+
+		annotation SummarizationSetBy = Automatic
+
+	column 費目名
+		dataType: string
+		lineageTag: daf2ba1a-e666-4531-afd1-89e1c4d4b63b
+		summarizeBy: none
+		sourceColumn: 費目名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 備考
+		dataType: string
+		lineageTag: 84538650-cd4f-4e1a-a69c-d3d1329c31a7
+		summarizeBy: none
+		sourceColumn: 備考
+
+		annotation SummarizationSetBy = Automatic
+
+	column 仕入予定日
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ab89c755-3993-4ea9-96d7-12668f020738
+		summarizeBy: none
+		sourceColumn: 仕入予定日
+
+		variation バリエーション
+			isDefault
+			relationship: bcfdac83-e194-491e-bccb-627c8b3861cb
+			defaultHierarchy: LocalDateTable_1f9cbdaf-0c2c-4e40-ac3a-d630f3d24d27.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 品名
+		dataType: string
+		lineageTag: bc2b21d2-5c05-416c-9f25-85a411e22598
+		summarizeBy: none
+		sourceColumn: 品名
+
+		annotation SummarizationSetBy = Automatic
+
+	column 数量
+		dataType: double
+		lineageTag: 55e443e9-c65f-48e9-8064-ef0e09c89b99
+		summarizeBy: sum
+		sourceColumn: 数量
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 単価
+		dataType: double
+		lineageTag: fa733d41-d376-46d2-9cd3-8069a4e4e5f5
+		summarizeBy: sum
+		sourceColumn: 単価
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 予定原価
+		dataType: int64
+		formatString: 0
+		lineageTag: 98851247-81a4-4227-97e4-96560039f1dc
+		summarizeBy: sum
+		sourceColumn: 予定原価
+
+		annotation SummarizationSetBy = Automatic
+
+	column 実際原価
+		dataType: int64
+		formatString: 0
+		lineageTag: 8579196a-689a-4870-8ef5-59d649b62560
+		summarizeBy: sum
+		sourceColumn: 実際原価
+
+		annotation SummarizationSetBy = Automatic
+
+	column 課税区分
+		dataType: string
+		lineageTag: bbff690f-51c8-4859-a46d-cbdb578b442a
+		summarizeBy: none
+		sourceColumn: 課税区分
+
+		annotation SummarizationSetBy = Automatic
+
+	column 税率
+		dataType: double
+		lineageTag: e803aa1b-cc0b-4217-abab-09c641509e38
+		summarizeBy: sum
+		sourceColumn: 税率
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 消費税
+		dataType: int64
+		formatString: 0
+		lineageTag: 9518f256-aea2-4741-b425-05062e203b7c
+		summarizeBy: sum
+		sourceColumn: 消費税
+
+		annotation SummarizationSetBy = Automatic
+
+	column 予定原価(税込)
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c58f364-99da-4b0f-b5c3-421a3a687299
+		summarizeBy: sum
+		sourceColumn: 予定原価(税込)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 予定原価進捗
+		dataType: string
+		lineageTag: 97082604-3eff-4bc6-9bb2-335aa3eea505
+		summarizeBy: none
+		sourceColumn: 予定原価進捗
+
+		annotation SummarizationSetBy = Automatic
+
+	column 進捗
+		dataType: string
+		lineageTag: 207d55e9-05aa-4fb3-9317-6b38bb695e1e
+		summarizeBy: none
+		sourceColumn: 進捗
+
+		annotation SummarizationSetBy = Automatic
+
+	column 稼働予定日
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 132d3a43-19b1-4791-9804-3c0312fdeb34
+		summarizeBy: none
+		sourceColumn: 稼働予定日
+
+		variation バリエーション
+			isDefault
+			relationship: 85e61fdd-e662-464a-b344-3e2c1a9149c7
+			defaultHierarchy: LocalDateTable_a9f9668d-05c7-4fe0-bed6-5e8cefd5b0f4.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition a_MOL直 = m
+		mode: import
+		source =
+				let
+				    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\a_MOL直"),
+				    #"フィルター選択された非表示の File1" = Table.SelectRows(ソース, each [Attributes]?[Hidden]? <> true),
+				    カスタム関数の呼び出し1 = Table.AddColumn(#"フィルター選択された非表示の File1", "ファイルの変換 (4)", each #"ファイルの変換 (4)"([Content])),
+				    #"名前が変更された列 1" = Table.RenameColumns(カスタム関数の呼び出し1, {"Name", "Source.Name"}),
+				    削除された他の列1 = Table.SelectColumns(#"名前が変更された列 1", {"Source.Name", "ファイルの変換 (4)"}),
+				    展開されたテーブル列1 = Table.ExpandTableColumn(削除された他の列1, "ファイルの変換 (4)", Table.ColumnNames(#"ファイルの変換 (4)"(#"サンプル ファイル (4)"))),
+				    変更された型 = Table.TransformColumnTypes(展開されたテーブル列1,{{"Source.Name", type text}, {"修正箇所", type text}, {"ステータス", type text}, {"予定原価ID", Int64.Type}, {"予定原価コード", Int64.Type}, {"JOBNo.", Int64.Type}, {"クライアント名", type text}, {"MOL決裁書番号", type text}, {"システム名称名", type text}, {"事業セグメント2親", type text}, {"事業セグメント2", type text}, {"メモ", type text}, {"継続有無名", type text}, {"営業担当者", type text}, {"得意先部門コード", Int64.Type}, {"得意先部門名", type text}, {"案件名", type text}, {"案件名カナ", type text}, {"売上項目ID", Int64.Type}, {"予定売上コード", Int64.Type}, {"売上項目名", type text}, {"売上区分", type text}, {"引合日", type date}, {"受注日", type date}, {"個別売上(予定)日", type date}, {"3階層部門コード", Int64.Type}, {"3階層部門名", type text}, {"4階層部門コード", Int64.Type}, {"4階層部門名", type text}, {"5階層部門コード", Int64.Type}, {"5階層部門名", type text}, {"6階層部門コード", Int64.Type}, {"6階層部門名", type text}, {"支払先コード", Int64.Type}, {"支払先名", type text}, {"費目コード", Int64.Type}, {"費目名", type text}, {"備考", type text}, {"仕入予定日", type date}, {"品名", type text}, {"数量", type number}, {"単価", type number}, {"予定原価", Int64.Type}, {"実際原価", Int64.Type}, {"課税区分", type text}, {"税率", type number}, {"消費税", Int64.Type}, {"予定原価(税込)", Int64.Type}, {"予定原価進捗", type text}, {"進捗", type text}, {"稼働予定日", type date}})
+				in
+				    変更された型
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

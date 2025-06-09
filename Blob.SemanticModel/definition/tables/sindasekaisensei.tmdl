@@ -1,0 +1,80 @@
+table sindasekaisensei
+	lineageTag: b8f09fee-e689-4889-90fe-a55f4dd438d6
+
+	column Name
+		dataType: string
+		lineageTag: e34c94d8-77eb-4b08-9b7d-48ed78a26a64
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: 32be86d5-d0d2-40ca-b85d-59748c15cacf
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1c2b5304-9a42-4624-a899-e81011db380a
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation バリエーション
+			isDefault
+			relationship: de9b1583-232b-4905-b3c0-60da10f842d6
+			defaultHierarchy: LocalDateTable_90b4c601-38fe-4d7f-b022-9f7bf4a109fd.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3fb4e0e3-c0ab-414a-8e1f-f94f22f46150
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation バリエーション
+			isDefault
+			relationship: 1e51f051-eecc-48f9-9082-d59948b83ab9
+			defaultHierarchy: LocalDateTable_ee732371-0581-4c5a-92ed-930ea272fea2.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aff5b477-f612-423a-8e53-cfc44e5b39ac
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation バリエーション
+			isDefault
+			relationship: c940b603-7081-4f50-8584-b79d80dc756b
+			defaultHierarchy: LocalDateTable_9cc2e77d-a729-476a-bde9-dd07ef2fc494.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: 9d2baaba-aed9-436a-a0a5-df2f5aa4bc81
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sindasekaisensei = m
+		mode: import
+		source =
+				let
+				    ソース = AzureStorage.Blobs("yurippe"),
+				    sindasekaisensei1 = ソース{[Name="sindasekaisensei"]}[Data]
+				in
+				    sindasekaisensei1
+
+	annotation PBI_ResultType = Table
+

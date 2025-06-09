@@ -1,0 +1,34 @@
+table CostCategory
+	lineageTag: 30d63726-9bf0-4f2f-bf67-cd066902565a
+
+	column 事業セグメント2親
+		dataType: string
+		lineageTag: fe4733c9-bda6-4105-87db-4fdc19cf65c3
+		summarizeBy: none
+		sourceColumn: 事業セグメント2親
+
+		annotation SummarizationSetBy = Automatic
+
+	column 費目
+		dataType: string
+		lineageTag: ebfbeb6d-b13c-4d3d-bf1d-d62a6320da78
+		summarizeBy: none
+		sourceColumn: 費目
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CostCategory = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\マスタ接続先\Master-Data.xlsx"), null, true),
+				    CostCategory_Sheet = ソース{[Item="CostCategory",Kind="Sheet"]}[Data],
+				    変更された型 = Table.TransformColumnTypes(CostCategory_Sheet,{{"Column1", type text}, {"Column2", type text}}),
+				    #"名前が変更された列 " = Table.RenameColumns(変更された型,{{"Column1", "事業セグメント2親"}, {"Column2", "費目"}})
+				in
+				    #"名前が変更された列 "
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Exception
+

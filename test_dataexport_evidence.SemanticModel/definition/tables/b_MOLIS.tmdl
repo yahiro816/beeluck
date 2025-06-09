@@ -1,0 +1,458 @@
+table b_MOLIS
+	isHidden
+	lineageTag: ae57ecd8-12a7-49de-8967-1449540d7cc7
+
+	column 'Source.Name'
+		dataType: string
+		isHidden
+		lineageTag: 8f95885e-69e2-45b8-9ae2-e1a9da0b283d
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ステータス
+		dataType: string
+		isHidden
+		lineageTag: e66868cf-e1ee-4886-8419-34a983f92d6e
+		summarizeBy: none
+		sourceColumn: ステータス
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 費目名
+		dataType: string
+		isHidden
+		lineageTag: e46fc677-3905-4df9-a699-2f41b9e022fc
+		summarizeBy: none
+		sourceColumn: 費目名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 仕入予定日
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: e9c3aee3-9a7d-46aa-9ddf-c00e991b3c63
+		summarizeBy: none
+		sourceColumn: 仕入予定日
+
+		variation バリエーション
+			isDefault
+			relationship: e926e200-377c-4d78-bb6a-fb481906b5a5
+			defaultHierarchy: LocalDateTable_c98efb5c-1506-48a8-8171-5174e0c6210e.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 事業セグメント2親
+		dataType: string
+		isHidden
+		lineageTag: 8c87111d-8349-4459-8987-f938a9227cad
+		summarizeBy: none
+		sourceColumn: 事業セグメント2親
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント2
+		dataType: string
+		isHidden
+		lineageTag: 61423cd0-49a9-40ea-8377-35fcc40e2628
+		summarizeBy: none
+		sourceColumn: 事業セグメント2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 事業セグメント
+		dataType: string
+		isHidden
+		lineageTag: d0ec2086-61b4-43fe-b685-5e65cac52a8e
+		summarizeBy: none
+		sourceColumn: 事業セグメント
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5階層部門名
+		dataType: string
+		isHidden
+		lineageTag: 12606227-debc-4c83-aee6-73eece7f57b0
+		summarizeBy: none
+		sourceColumn: 5階層部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 6階層部門名
+		dataType: string
+		isHidden
+		lineageTag: dbe63c1f-8ca2-4abf-9698-f5d0a5e45b8c
+		summarizeBy: none
+		sourceColumn: 6階層部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column システム名称名
+		dataType: string
+		isHidden
+		lineageTag: 01777de1-a8c6-403d-a3a6-02c454ef9985
+		summarizeBy: none
+		sourceColumn: システム名称名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'JOBNo.'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dc1238f8-3a11-4b0b-8668-2067cd01e57f
+		summarizeBy: sum
+		sourceColumn: JOBNo.
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 案件名
+		dataType: string
+		isHidden
+		lineageTag: a045b8e5-debe-4e4e-9a70-03bfda118363
+		summarizeBy: none
+		sourceColumn: 案件名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 得意先部門名
+		dataType: string
+		isHidden
+		lineageTag: 5ee1de2c-8ed6-4c1e-95e7-627323fac2f8
+		summarizeBy: none
+		sourceColumn: 得意先部門名
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOL決裁書番号
+		dataType: string
+		isHidden
+		lineageTag: b9af3845-4558-405d-85ab-dcbaaf3b94cf
+		summarizeBy: none
+		sourceColumn: MOL決裁書番号
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 開始日
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 6896c42e-2a51-4e98-ad9d-4e84024c2dab
+		summarizeBy: none
+		sourceColumn: 開始日
+
+		variation バリエーション
+			isDefault
+			relationship: ee7f8049-4fb7-464d-8af0-270292c3d490
+			defaultHierarchy: LocalDateTable_2d6bcbe2-4786-48f4-9e0d-285ffefef2b8.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 完了予定日
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 698a7c53-d83f-4fa4-8e6f-2d2ebd222505
+		summarizeBy: none
+		sourceColumn: 完了予定日
+
+		variation バリエーション
+			isDefault
+			relationship: 2aeef293-4e6d-4b51-a95e-52b6d574fadb
+			defaultHierarchy: LocalDateTable_8d87e9dc-b8bd-4142-ac83-85d50107e614.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 検収予定日
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 72973189-62f9-467e-827c-9013ddbded68
+		summarizeBy: none
+		sourceColumn: 検収予定日
+
+		variation バリエーション
+			isDefault
+			relationship: 3c2d177e-99e4-4c82-bc97-7b88904437b1
+			defaultHierarchy: LocalDateTable_545a8265-67ff-41dc-9559-6bf9b45130f0.日付の階層
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 稼働予定日
+		dataType: string
+		isHidden
+		lineageTag: 995fb12f-dcd2-4393-b83d-c993b83c1731
+		summarizeBy: none
+		sourceColumn: 稼働予定日
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 社員コスト作業時間（プロパー）
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bf6b68d9-23c1-4e61-84c6-25d5633bc728
+		summarizeBy: sum
+		sourceColumn: 社員コスト作業時間（プロパー）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 社員コスト作業人月（プロパー）
+		dataType: double
+		isHidden
+		lineageTag: 1af18163-550a-4e2e-81be-64fc61ca9cff
+		summarizeBy: sum
+		sourceColumn: 社員コスト作業人月（プロパー）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 社員コスト作業金額（プロパー）
+		dataType: double
+		isHidden
+		lineageTag: f6a5d310-7d48-4362-a935-392bafb5255c
+		summarizeBy: sum
+		sourceColumn: 社員コスト作業金額（プロパー）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 社員コスト利益額
+		dataType: double
+		isHidden
+		lineageTag: c1cecd59-f109-46b9-8857-bd1554b4ea50
+		summarizeBy: sum
+		sourceColumn: 社員コスト利益額
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 社員コスト費用計
+		dataType: double
+		isHidden
+		lineageTag: f769dd24-7d8b-452a-9205-b18b0ec4a6a9
+		summarizeBy: sum
+		sourceColumn: 社員コスト費用計
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 常駐BPコスト作業時間（常駐BP）
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f91eddcc-4abb-4b03-9a5a-fc5d18ca3071
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト作業時間（常駐BP）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 常駐BPコスト作業人月（常駐BP）
+		dataType: double
+		isHidden
+		lineageTag: b16a9e4a-097f-4bc9-ad7f-59aca0eb32e5
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト作業人月（常駐BP）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 常駐BPコスト作業金額（常駐BP）
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5521cc2b-339e-4815-93bc-1c5eb26c95e8
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト作業金額（常駐BP）
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 常駐BPコスト割掛
+		dataType: double
+		isHidden
+		lineageTag: d9152bb0-bd72-4149-a027-b5ad91ee6e4c
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト割掛
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 常駐BPコスト利益額
+		dataType: double
+		isHidden
+		lineageTag: 33906448-49ed-41a8-b274-f9ea48a96dcc
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト利益額
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 常駐BPコスト費用計
+		dataType: double
+		isHidden
+		lineageTag: 7ddff9cd-c1cc-4b9d-9d1c-1af94f766a1c
+		summarizeBy: sum
+		sourceColumn: 常駐BPコスト費用計
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 一括外注コスト一括外注費
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 303d4ce6-18ee-4fe8-ad6f-6542dadb0ff9
+		summarizeBy: sum
+		sourceColumn: 一括外注コスト一括外注費
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 一括外注コスト利益額
+		dataType: double
+		isHidden
+		lineageTag: 8fd21217-d274-44c9-9c19-27ec84ee0132
+		summarizeBy: sum
+		sourceColumn: 一括外注コスト利益額
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 一括外注コスト費用計
+		dataType: double
+		isHidden
+		lineageTag: 8431d259-eff4-4991-b8fc-c48787acb3e9
+		summarizeBy: sum
+		sourceColumn: 一括外注コスト費用計
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 外注計
+		dataType: double
+		isHidden
+		lineageTag: 38c209a8-e4a0-4a6a-b70f-dbbe5897b222
+		summarizeBy: sum
+		sourceColumn: 外注計
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 予定原価
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6eb0ddd6-4cde-4c7b-a718-495c2572b7ec
+		summarizeBy: sum
+		sourceColumn: 予定原価
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition b_MOLIS = m
+		mode: import
+		source =
+				let
+				    ソース = Folder.Files("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\接続先\b_MOLIS"),
+				    #"フィルター選択された非表示の File1" = Table.SelectRows(ソース, each [Attributes]?[Hidden]? <> true),
+				    カスタム関数の呼び出し1 = Table.AddColumn(#"フィルター選択された非表示の File1", "ファイルの変換 (12)", each #"ファイルの変換 (12)"([Content])),
+				    #"名前が変更された列 1" = Table.RenameColumns(カスタム関数の呼び出し1, {"Name", "Source.Name"}),
+				    削除された他の列1 = Table.SelectColumns(#"名前が変更された列 1", {"Source.Name", "ファイルの変換 (12)"}),
+				    展開されたテーブル列1 = Table.ExpandTableColumn(削除された他の列1, "ファイルの変換 (12)", Table.ColumnNames(#"ファイルの変換 (12)"(#"サンプル ファイル (12)"))),
+				    変更された型 = Table.TransformColumnTypes(展開されたテーブル列1,{{"Source.Name", type text}, {"ステータス", type text}, {"費目名", type text}, {"仕入予定日", type date}, {"事業セグメント2親", type text}, {"事業セグメント2", type text}, {"事業セグメント", type text}, {"5階層部門名", type text}, {"6階層部門名", type text}, {"システム名称名", type text}, {"JOBNo.", Int64.Type}, {"案件名", type text}, {"得意先部門名", type text}, {"MOL決裁書番号", type text}, {"開始日", type date}, {"完了予定日", type date}, {"検収予定日", type date}, {"稼働予定日", type text}, {"社員コスト作業時間（プロパー）", Int64.Type}, {"社員コスト作業人月（プロパー）", type number}, {"社員コスト作業金額（プロパー）", type number}, {"社員コスト利益額", type number}, {"社員コスト費用計", type number}, {"常駐BPコスト作業時間（常駐BP）", Int64.Type}, {"常駐BPコスト作業人月（常駐BP）", type number}, {"常駐BPコスト作業金額（常駐BP）", Int64.Type}, {"常駐BPコスト割掛", type number}, {"常駐BPコスト利益額", type number}, {"常駐BPコスト費用計", type number}, {"一括外注コスト一括外注費", Int64.Type}, {"一括外注コスト利益額", type number}, {"一括外注コスト費用計", type number}, {"外注計", type number}, {"予定原価", Int64.Type}})
+				in
+				    変更された型
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

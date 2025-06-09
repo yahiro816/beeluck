@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Blob テスト"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "45a86e29-0b55-82dd-44b9-774af30fd275"
+  }
+}

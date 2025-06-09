@@ -1,0 +1,120 @@
+table クエリ1
+	lineageTag: 5e90ca58-8426-4940-84c7-616a192247ee
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 5886aa98-6002-4849-889a-4c7cfda1c0e3
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column changeNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 0481b576-f159-4b3c-9263-f2b1f682e724
+		summarizeBy: sum
+		sourceColumn: changeNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column cloud
+		dataType: string
+		lineageTag: b068439e-6fed-44e1-9211-33e2e57b2f91
+		summarizeBy: none
+		sourceColumn: cloud
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.name'
+		dataType: string
+		lineageTag: 1a9a52b5-f618-4e79-8154-033cd544b16d
+		summarizeBy: none
+		sourceColumn: values.name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.id'
+		dataType: string
+		lineageTag: f4b12ec0-5ed4-47dd-9d84-ab3f125b7ae7
+		summarizeBy: none
+		sourceColumn: values.id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.changeNumber'
+		dataType: int64
+		formatString: 0
+		lineageTag: c5e276a9-4a69-4754-aa4f-56e9016bd989
+		summarizeBy: sum
+		sourceColumn: values.properties.changeNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.region'
+		dataType: string
+		lineageTag: 64e8fccb-c23b-4f12-af3c-730b9a4b9e59
+		summarizeBy: none
+		sourceColumn: values.properties.region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.regionId'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7de8b713-64cc-4e4e-b89b-8fecdd728bd0
+		summarizeBy: count
+		sourceColumn: values.properties.regionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.platform'
+		dataType: string
+		lineageTag: 0270f54a-85f8-438d-975e-4cac2a36f6a6
+		summarizeBy: none
+		sourceColumn: values.properties.platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.systemService'
+		dataType: string
+		lineageTag: 0790870e-e4a7-4497-a8fd-86f25cf00493
+		summarizeBy: none
+		sourceColumn: values.properties.systemService
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.addressPrefixes'
+		dataType: string
+		lineageTag: c1731dd9-54c6-4671-855c-1989137c3845
+		summarizeBy: none
+		sourceColumn: values.properties.addressPrefixes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'values.properties.networkFeatures'
+		dataType: string
+		lineageTag: 5a798652-95b9-49f4-ac34-54e09c56a106
+		summarizeBy: none
+		sourceColumn: values.properties.networkFeatures
+
+		annotation SummarizationSetBy = Automatic
+
+	partition クエリ1 = m
+		mode: import
+		source =
+				let
+				    ソース = AzureStorage.DataLake("https://ipselect.dfs.core.windows.net/"),
+				    #"フィルター選択された非表示の File1" = Table.SelectRows(ソース, each [Attributes]?[Hidden]? <> true),
+				    カスタム関数の呼び出し1 = Table.AddColumn(#"フィルター選択された非表示の File1", "ファイルの変換", each ファイルの変換([Content])),
+				    #"名前が変更された列 1" = Table.RenameColumns(カスタム関数の呼び出し1, {"Name", "Source.Name"}),
+				    削除された他の列1 = Table.SelectColumns(#"名前が変更された列 1", {"Source.Name", "ファイルの変換"}),
+				    展開されたテーブル列1 = Table.ExpandTableColumn(削除された他の列1, "ファイルの変換", Table.ColumnNames(ファイルの変換(#"サンプル ファイル"))),
+				    変更された型 = Table.TransformColumnTypes(展開されたテーブル列1,{{"Source.Name", type text}, {"changeNumber", Int64.Type}, {"cloud", type text}, {"values.name", type text}, {"values.id", type text}, {"values.properties.changeNumber", Int64.Type}, {"values.properties.region", type text}, {"values.properties.regionId", Int64.Type}, {"values.properties.platform", type text}, {"values.properties.systemService", type text}, {"values.properties.addressPrefixes", type any}, {"values.properties.networkFeatures", type any}})
+				in
+				    変更された型
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

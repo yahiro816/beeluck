@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ryukaoon",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "0647b727-a595-4314-9b68-5ba14a940f4d",
+        "location": "https://inventoria.dfs.core.windows.net",
+        "subpath": "/ryukaoon"
+      }
+    }
+  }
+]

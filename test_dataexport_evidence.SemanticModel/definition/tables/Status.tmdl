@@ -1,0 +1,43 @@
+table Status
+	lineageTag: 6a662d8f-bc70-4a6f-82c3-b7a46ad1bcff
+
+	column 'No.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 89f1d948-5b42-4146-a4df-613915f4a3bc
+		summarizeBy: none
+		sourceColumn: No.
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: ceeab571-851e-4eb4-bd7e-7163f8bc8f1a
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No.Status'
+		dataType: string
+		lineageTag: b5fc4dd7-95f1-41b3-8ef4-c9613e750bf4
+		summarizeBy: none
+		sourceColumn: No.Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Status = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\マスタ接続先\Master-Data.xlsx"), null, true),
+				    Status_Sheet = ソース{[Item="Status",Kind="Sheet"]}[Data],
+				    昇格されたヘッダー数 = Table.PromoteHeaders(Status_Sheet, [PromoteAllScalars=true]),
+				    変更された型 = Table.TransformColumnTypes(昇格されたヘッダー数,{{"No.", Int64.Type}, {"Status", type text}, {"No.Status", type text}})
+				in
+				    変更された型
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = ナビゲーション
+

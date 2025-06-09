@@ -1,0 +1,15 @@
+relationship de9b1583-232b-4905-b3c0-60da10f842d6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sindasekaisensei.'Date accessed'
+	toColumn: LocalDateTable_90b4c601-38fe-4d7f-b022-9f7bf4a109fd.Date
+
+relationship 1e51f051-eecc-48f9-9082-d59948b83ab9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sindasekaisensei.'Date modified'
+	toColumn: LocalDateTable_ee732371-0581-4c5a-92ed-930ea272fea2.Date
+
+relationship c940b603-7081-4f50-8584-b79d80dc756b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sindasekaisensei.'Date created'
+	toColumn: LocalDateTable_9cc2e77d-a729-476a-bde9-dd07ef2fc494.Date
+

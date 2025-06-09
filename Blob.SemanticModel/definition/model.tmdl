@@ -1,0 +1,22 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["sindasekaisensei"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b
+
+ref table sindasekaisensei
+ref table DateTableTemplate_ffde9b0b-48cb-4642-926e-9818dd19eda9
+ref table LocalDateTable_90b4c601-38fe-4d7f-b022-9f7bf4a109fd
+ref table LocalDateTable_ee732371-0581-4c5a-92ed-930ea272fea2
+ref table LocalDateTable_9cc2e77d-a729-476a-bde9-dd07ef2fc494
+
+ref cultureInfo ja-JP
+

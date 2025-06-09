@@ -1,0 +1,27 @@
+table sindasekaisensei
+	lineageTag: 5c402d09-9f19-4d54-9bed-952e23ddbe94
+
+	column sindasekaisensei
+		dataType: string
+		lineageTag: af352954-453a-4de5-b49c-cf65a9095985
+		summarizeBy: none
+		sourceColumn: sindasekaisensei
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sindasekaisensei = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.Blobs("yurippe"),
+				    sindasekaisensei1 = Source{[Name="sindasekaisensei"]}[Data],
+				    #"https://yurippe blob core windows net/sindasekaisensei/_ServiceTags_Public_20250512 json" = sindasekaisensei1{[#"Folder Path"="https://yurippe.blob.core.windows.net/sindasekaisensei/",Name="ServiceTags_Public_20250512.json"]}[Content],
+				    #"Imported JSON" = Json.Document(#"https://yurippe blob core windows net/sindasekaisensei/_ServiceTags_Public_20250512 json",932),
+				    values = #"Imported JSON"[values]
+				in
+				    values
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = List
+

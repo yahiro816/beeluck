@@ -1,0 +1,109 @@
+relationship e926e200-377c-4d78-bb6a-fb481906b5a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: b_MOLIS.仕入予定日
+	toColumn: LocalDateTable_c98efb5c-1506-48a8-8171-5174e0c6210e.Date
+
+relationship 616762a0-8f66-4772-8782-b9030bbc8e72
+	joinOnDateBehavior: datePartOnly
+	fromColumn: c_ZAC外_MOLISサービス.仕入予定日
+	toColumn: LocalDateTable_bc9a5be6-2893-40eb-9975-0fcb09e3061d.Date
+
+relationship 7a7d59d4-7190-4b97-8ebf-9086ca1d0be5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.仕入予定日
+	toColumn: LocalDateTable_08cf282a-7ca5-47eb-9c4f-5890aab8a05d.Date
+
+relationship 1aa2ff53-3a32-4814-a7ed-e4b7c0e8c0d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a_MOL直.引合日
+	toColumn: LocalDateTable_5a9c7773-8bc7-423f-9716-a5de1574b3cc.Date
+
+relationship 850b8799-26b8-4e06-8dc1-2753ae5e83db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a_MOL直.受注日
+	toColumn: LocalDateTable_b394cb5a-24bd-4661-9994-b1d83f00f9b2.Date
+
+relationship d924ce12-7556-44e5-8746-15cfcc09ffb2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a_MOL直.個別売上(予定)日
+	toColumn: LocalDateTable_fbcf81fd-a4a1-4cc0-b60d-a05f57fe1745.Date
+
+relationship bcfdac83-e194-491e-bccb-627c8b3861cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a_MOL直.仕入予定日
+	toColumn: LocalDateTable_1f9cbdaf-0c2c-4e40-ac3a-d630f3d24d27.Date
+
+relationship 85e61fdd-e662-464a-b344-3e2c1a9149c7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a_MOL直.稼働予定日
+	toColumn: LocalDateTable_a9f9668d-05c7-4fe0-bed6-5e8cefd5b0f4.Date
+
+relationship 512d253f-af08-405d-8460-a6a0d57ce154
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.引合日
+	toColumn: LocalDateTable_65e70d76-0a10-468a-9e96-f73958cf079e.Date
+
+relationship 752773a7-ee10-452c-a9f4-897a8229bd99
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.受注日
+	toColumn: LocalDateTable_78506d88-dfab-425c-bc70-ffdfb3ac5aff.Date
+
+relationship 22f9422c-10c5-4bb0-bf55-44e63cc46c8b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.個別売上(予定)日
+	toColumn: LocalDateTable_9b05a46c-9e51-4b86-a0de-da25b0a0ec7b.Date
+
+relationship ee7f8049-4fb7-464d-8af0-270292c3d490
+	joinOnDateBehavior: datePartOnly
+	fromColumn: b_MOLIS.開始日
+	toColumn: LocalDateTable_2d6bcbe2-4786-48f4-9e0d-285ffefef2b8.Date
+
+relationship 2aeef293-4e6d-4b51-a95e-52b6d574fadb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: b_MOLIS.完了予定日
+	toColumn: LocalDateTable_8d87e9dc-b8bd-4142-ac83-85d50107e614.Date
+
+relationship 3c2d177e-99e4-4c82-bc97-7b88904437b1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: b_MOLIS.検収予定日
+	toColumn: LocalDateTable_545a8265-67ff-41dc-9559-6bf9b45130f0.Date
+
+relationship e8888ffd-a97b-4a4e-96ad-1c6d7148d4dd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.開始日
+	toColumn: LocalDateTable_0c01c77e-204e-4d30-986a-8c629491255c.Date
+
+relationship d037db78-42df-474b-953e-d050ff794618
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.完了予定日
+	toColumn: LocalDateTable_44c3445e-2f0d-43b7-8b20-f3f777b6aca6.Date
+
+relationship 4c01701c-510c-4fdf-8625-e51853b8deaa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: a+b+c.検収予定日
+	toColumn: LocalDateTable_c4b920d3-9ff3-4598-8226-67cc09c28d44.Date
+
+relationship a77883c5-7818-3aed-1a4b-21cafd3acaad
+	fromColumn: a+b+c.事業セグメント2親
+	toColumn: CostCategory.事業セグメント2親
+
+relationship 25ef6eb5-8d28-3297-eda5-baa4dcfa7a13
+	fromColumn: a+b+c.ステータス
+	toColumn: Status.Status
+
+relationship bea9feca-c440-b395-f12b-421ff2c4b5df
+	fromColumn: a+b+c.6階層部門名
+	toColumn: TeamAbbreviation.6階層部門名
+
+relationship 52f466d7-a551-1279-1976-ce181f0c625e
+	fromColumn: a+b+c.得意先部門名
+	toColumn: Tokuisaki.tokuisaki
+
+relationship AutoDetected_a3fe8765-45ea-4d4b-bf1b-41c4dd28b837
+	fromColumn: a+b+c.Order
+	toColumn: 月の順番(手入力データ).Order
+
+relationship c3ad70e7-4699-f431-f1da-602ed9213f29
+	fromColumn: a+b+c.取引パートナ
+	toColumn: Partner.取引パートナ
+

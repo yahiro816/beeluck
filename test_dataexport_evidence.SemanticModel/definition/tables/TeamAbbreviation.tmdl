@@ -1,0 +1,50 @@
+table TeamAbbreviation
+	lineageTag: 72e41bd1-6a46-442a-9a71-07acd8d3e30f
+
+	column 6階層部門名
+		dataType: string
+		lineageTag: 2777107b-73a9-465c-bc9f-791c1f3ca1d8
+		summarizeBy: none
+		sourceColumn: 6階層部門名
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLIS部名
+		dataType: string
+		lineageTag: ce710e6d-5e6e-4913-bbb8-c2b61aadf7ed
+		summarizeBy: none
+		sourceColumn: MOLIS部名
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLISチーム名
+		dataType: string
+		lineageTag: d1c1d8bd-041a-4153-9ebe-57bcf088dfd7
+		summarizeBy: none
+		sourceColumn: MOLISチーム名
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 11037493-0bbe-46ce-bcec-6a127717c510
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TeamAbbreviation = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\HAGIWARAMari-Ism\MOLGROUP.COM\MOL_T_slip_sharing - ドキュメント\02_管理会計\01_MOLシステム関係費PowerBI\FY2025(新ダッシュボード)\マスタ接続先\Master-Data.xlsx"), null, true),
+				    TeamAbbreviation_Sheet = ソース{[Item="TeamAbbreviation",Kind="Sheet"]}[Data],
+				    変更された型 = Table.TransformColumnTypes(TeamAbbreviation_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}}),
+				    #"名前が変更された列 " = Table.RenameColumns(変更された型,{{"Column1", "6階層部門名"}, {"Column2", "MOLIS部名"}, {"Column3", "MOLISチーム名"}})
+				in
+				    #"名前が変更された列 "
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
