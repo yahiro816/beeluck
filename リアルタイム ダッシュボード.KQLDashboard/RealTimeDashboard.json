@@ -1,0 +1,35 @@
+{
+  "autoRefresh": {
+    "enabled": false
+  },
+  "baseQueries": [],
+  "tiles": [],
+  "dataSources": [],
+  "pages": [
+    {
+      "name": "ページ 1",
+      "id": "9a150e73-3ae1-4ac0-806c-5796394f5788"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "b32d24e5-2718-49fa-adb8-50bd04e8ac53",
+      "displayName": "時間の範囲",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "queries": [],
+  "schema_version": 62,
+  "title": "リアルタイム ダッシュボード"
+}
