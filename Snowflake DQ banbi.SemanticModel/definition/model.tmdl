@@ -1,0 +1,22 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["CALL_CENTER","CATALOG_PAGE","CATALOG_RETURNS","CATALOG_SALES","CUSTOMER"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.143.1378.0 (25.05)+4e1de9c957866bc5336e0d250838314aa54ff3a8
+
+ref table CALL_CENTER
+ref table CATALOG_PAGE
+ref table CATALOG_RETURNS
+ref table CATALOG_SALES
+ref table CUSTOMER
+
+ref cultureInfo ja-JP
+

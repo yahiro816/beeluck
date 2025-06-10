@@ -1,0 +1,313 @@
+table CATALOG_RETURNS
+	lineageTag: ab16077e-18b9-4977-bbe6-96ca4a896dfa
+
+	column CR_RETURNED_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: ee2a8388-c182-4f7a-a9f0-edd288fdce7b
+		summarizeBy: sum
+		sourceColumn: CR_RETURNED_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURNED_TIME_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: edca5f74-7711-481a-8ef3-9315a68814dd
+		summarizeBy: sum
+		sourceColumn: CR_RETURNED_TIME_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_ITEM_SK
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 0)
+		lineageTag: d667041f-9796-40cb-a095-4a212532a1f9
+		summarizeBy: sum
+		sourceColumn: CR_ITEM_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REFUNDED_CUSTOMER_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: dd411fa1-7961-4a9d-b68d-2c359d324de5
+		summarizeBy: sum
+		sourceColumn: CR_REFUNDED_CUSTOMER_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REFUNDED_CDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 40113fff-ed02-4c59-ba5d-1b388205ceca
+		summarizeBy: sum
+		sourceColumn: CR_REFUNDED_CDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REFUNDED_HDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 261b1fb5-365a-4340-888e-9390ed0b95b5
+		summarizeBy: sum
+		sourceColumn: CR_REFUNDED_HDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REFUNDED_ADDR_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: afa7ca45-fd36-45a6-9c29-d4d91bd630fe
+		summarizeBy: sum
+		sourceColumn: CR_REFUNDED_ADDR_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURNING_CUSTOMER_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 8fe76deb-743e-4b23-9c74-b63c9c6d9e63
+		summarizeBy: sum
+		sourceColumn: CR_RETURNING_CUSTOMER_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURNING_CDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: d655057b-aaad-41ca-9a0f-2c92fa4ccfba
+		summarizeBy: sum
+		sourceColumn: CR_RETURNING_CDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURNING_HDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 2f9f2c3c-868a-438e-9328-ee5ad356aa86
+		summarizeBy: sum
+		sourceColumn: CR_RETURNING_HDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURNING_ADDR_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: dc536187-dea3-46e3-88d6-07e61c46b55d
+		summarizeBy: sum
+		sourceColumn: CR_RETURNING_ADDR_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_CALL_CENTER_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 378cd410-11a1-4e8b-8149-9b4a8354041a
+		summarizeBy: sum
+		sourceColumn: CR_CALL_CENTER_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_CATALOG_PAGE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: d202d5c2-ca1f-449c-aa97-467601464fa7
+		summarizeBy: sum
+		sourceColumn: CR_CATALOG_PAGE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_SHIP_MODE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 824c326e-0257-4f08-b02b-9ac31bd090ad
+		summarizeBy: sum
+		sourceColumn: CR_SHIP_MODE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_WAREHOUSE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 42384c72-5dcd-4050-8f19-2df711dea25b
+		summarizeBy: sum
+		sourceColumn: CR_WAREHOUSE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REASON_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 12da9366-5580-4e12-afb4-9eba2b628eec
+		summarizeBy: sum
+		sourceColumn: CR_REASON_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_ORDER_NUMBER
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 64f4c0f1-e1af-4ee2-ba65-a964fc5c9fe5
+		summarizeBy: sum
+		sourceColumn: CR_ORDER_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURN_QUANTITY
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: c1d5e9b2-f61b-4eb1-823e-d904d382cfc8
+		summarizeBy: sum
+		sourceColumn: CR_RETURN_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURN_AMOUNT
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: 092ac3d8-702b-4fe6-8c64-506411f90628
+		summarizeBy: sum
+		sourceColumn: CR_RETURN_AMOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURN_TAX
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: fa25aa02-e07a-4f33-8813-a206035348b0
+		summarizeBy: sum
+		sourceColumn: CR_RETURN_TAX
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURN_AMT_INC_TAX
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: dd4452d4-5119-4a6c-938f-2c1ed19818fb
+		summarizeBy: sum
+		sourceColumn: CR_RETURN_AMT_INC_TAX
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_FEE
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: fb4dc321-7952-45e3-9a3a-8ad961b8d460
+		summarizeBy: sum
+		sourceColumn: CR_FEE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_RETURN_SHIP_COST
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: dfb8d61d-5453-4862-9e5e-f9b9773a29ab
+		summarizeBy: sum
+		sourceColumn: CR_RETURN_SHIP_COST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REFUNDED_CASH
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: c821d935-ca97-44e3-8547-288fe803cf3a
+		summarizeBy: sum
+		sourceColumn: CR_REFUNDED_CASH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_REVERSED_CHARGE
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: 1ff204b3-6663-4019-a145-7824cd635524
+		summarizeBy: sum
+		sourceColumn: CR_REVERSED_CHARGE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_STORE_CREDIT
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: 32f33a94-8d85-4c31-a265-f13bd2aa1e27
+		summarizeBy: sum
+		sourceColumn: CR_STORE_CREDIT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CR_NET_LOSS
+		dataType: double
+		sourceProviderType: decimal(7, 2)
+		lineageTag: 7264a242-2576-4654-9c73-5045ab63f7b0
+		summarizeBy: sum
+		sourceColumn: CR_NET_LOSS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition CATALOG_RETURNS = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("ICJQFHV-OJ42416.snowflakecomputing.com","SNOWFLAKE_LEARNING_WH",[Implementation="2.0"]),
+				    SNOWFLAKE_SAMPLE_DATA_Database = Source{[Name="SNOWFLAKE_SAMPLE_DATA",Kind="Database"]}[Data],
+				    TPCDS_SF100TCL_Schema = SNOWFLAKE_SAMPLE_DATA_Database{[Name="TPCDS_SF100TCL",Kind="Schema"]}[Data],
+				    CATALOG_RETURNS_Table = TPCDS_SF100TCL_Schema{[Name="CATALOG_RETURNS",Kind="Table"]}[Data]
+				in
+				    CATALOG_RETURNS_Table
+

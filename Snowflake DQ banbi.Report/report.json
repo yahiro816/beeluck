@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "03167f1783cfaab80821",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5d1a4ce3ccb11dcc47d3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":135.19756838905775,\"y\":100.1823708206687,\"z\":0,\"width\":1035.8662613981764,\"height\":619.5744680851064,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CALL_CENTER.CC_CALL_CENTER_ID\"},{\"queryRef\":\"Sum(CALL_CENTER.CC_CALL_CENTER_SK)\"},{\"queryRef\":\"CALL_CENTER.CC_CITY\"},{\"queryRef\":\"Sum(CALL_CENTER.CC_CLOSED_DATE_SK)\"},{\"queryRef\":\"CALL_CENTER.CC_CLASS\"},{\"queryRef\":\"Sum(CALL_CENTER.CC_COMPANY)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CALL_CENTER\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_CALL_CENTER_ID\"},\"Name\":\"CALL_CENTER.CC_CALL_CENTER_ID\",\"NativeReferenceName\":\"CC_CALL_CENTER_ID\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_CALL_CENTER_SK\"}},\"Function\":0},\"Name\":\"Sum(CALL_CENTER.CC_CALL_CENTER_SK)\",\"NativeReferenceName\":\"CC_CALL_CENTER_SK の合計\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_CITY\"},\"Name\":\"CALL_CENTER.CC_CITY\",\"NativeReferenceName\":\"CC_CITY\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_CLOSED_DATE_SK\"}},\"Function\":0},\"Name\":\"Sum(CALL_CENTER.CC_CLOSED_DATE_SK)\",\"NativeReferenceName\":\"CC_CLOSED_DATE_SK の合計\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_CLASS\"},\"Name\":\"CALL_CENTER.CC_CLASS\",\"NativeReferenceName\":\"CC_CLASS\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CC_COMPANY\"}},\"Function\":0},\"Name\":\"Sum(CALL_CENTER.CC_COMPANY)\",\"NativeReferenceName\":\"CC_COMPANY の合計\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 619.57,
+          "width": 1035.87,
+          "x": 135.20,
+          "y": 100.18,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

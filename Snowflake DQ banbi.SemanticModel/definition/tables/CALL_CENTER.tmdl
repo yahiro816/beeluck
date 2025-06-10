@@ -1,0 +1,323 @@
+table CALL_CENTER
+	lineageTag: 3fdcbe7c-786b-4d24-9029-9a4b4cb33cec
+
+	column CC_CALL_CENTER_SK
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 0)
+		lineageTag: bcc7e708-5b74-4d7e-922a-00f812ea5832
+		summarizeBy: sum
+		sourceColumn: CC_CALL_CENTER_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_CALL_CENTER_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16)
+		lineageTag: e64de87b-70ea-499d-8c64-c9b21e6e8e95
+		summarizeBy: none
+		sourceColumn: CC_CALL_CENTER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_REC_START_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 7775309f-4f75-4ef4-a11f-259a3d707e72
+		summarizeBy: none
+		sourceColumn: CC_REC_START_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CC_REC_END_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: ea98eb67-c6d1-4827-8055-41fd6eae383c
+		summarizeBy: none
+		sourceColumn: CC_REC_END_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CC_CLOSED_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 102d659b-9b54-4b6a-9b3f-fcc34a242681
+		summarizeBy: sum
+		sourceColumn: CC_CLOSED_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_OPEN_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: a20968ca-d3ca-436b-a735-79acf0300b6d
+		summarizeBy: sum
+		sourceColumn: CC_OPEN_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_NAME
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 6e0c3b8a-495a-445d-bf2b-192f7572354d
+		summarizeBy: none
+		sourceColumn: CC_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_CLASS
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: d71376a9-b413-474a-9106-407a82542262
+		summarizeBy: none
+		sourceColumn: CC_CLASS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_EMPLOYEES
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: a4305864-4cda-446e-8cbd-8b536377ced0
+		summarizeBy: sum
+		sourceColumn: CC_EMPLOYEES
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_SQ_FT
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 1becaa43-1d6f-4a11-afc4-0fff5c4079ac
+		summarizeBy: sum
+		sourceColumn: CC_SQ_FT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_HOURS
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		lineageTag: b1ecfe95-564a-4c5d-9cb5-5b1c801bd8ea
+		summarizeBy: none
+		sourceColumn: CC_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_MANAGER
+		dataType: string
+		sourceProviderType: nvarchar(40)
+		lineageTag: 709851ed-b5f2-434b-bf5e-54538e7a2cec
+		summarizeBy: none
+		sourceColumn: CC_MANAGER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_MKT_ID
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: b9665c42-516a-44c7-a00a-fe1822b6fe60
+		summarizeBy: count
+		sourceColumn: CC_MKT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_MKT_CLASS
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 861e8895-440d-427f-bdca-dfc8a5481088
+		summarizeBy: none
+		sourceColumn: CC_MKT_CLASS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_MKT_DESC
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: 2c051639-903c-489b-86b8-88431fef78ce
+		summarizeBy: none
+		sourceColumn: CC_MKT_DESC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_MARKET_MANAGER
+		dataType: string
+		sourceProviderType: nvarchar(40)
+		lineageTag: 25c8ff7e-3eac-4d41-8d01-d50dcde73f56
+		summarizeBy: none
+		sourceColumn: CC_MARKET_MANAGER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_DIVISION
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: fc9ef295-92e5-4f97-8f26-32cf5a0a7c72
+		summarizeBy: sum
+		sourceColumn: CC_DIVISION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_DIVISION_NAME
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 9957b127-dc97-4d66-b5d7-a45db449515d
+		summarizeBy: none
+		sourceColumn: CC_DIVISION_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_COMPANY
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: f95359f0-e067-4e90-b5f4-1e4e13330318
+		summarizeBy: sum
+		sourceColumn: CC_COMPANY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_COMPANY_NAME
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 7e972d17-3dd9-40bc-94fe-c642e8d403da
+		summarizeBy: none
+		sourceColumn: CC_COMPANY_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_STREET_NUMBER
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: f5969ac1-18a4-4d6c-a7bd-0c545b570dff
+		summarizeBy: none
+		sourceColumn: CC_STREET_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_STREET_NAME
+		dataType: string
+		sourceProviderType: nvarchar(60)
+		lineageTag: 47cffaca-da98-4751-b775-0c9ef3cc0d82
+		summarizeBy: none
+		sourceColumn: CC_STREET_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_STREET_TYPE
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		lineageTag: f3f12f5e-0abe-4ae1-96c5-35ea1fae59ea
+		summarizeBy: none
+		sourceColumn: CC_STREET_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_SUITE_NUMBER
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: 3b349809-d174-4a36-a285-d6e9ddd842ba
+		summarizeBy: none
+		sourceColumn: CC_SUITE_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_CITY
+		dataType: string
+		sourceProviderType: nvarchar(60)
+		lineageTag: 901eb812-e8f8-4ccd-8c2a-0f33d90fa86e
+		summarizeBy: none
+		sourceColumn: CC_CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_COUNTY
+		dataType: string
+		sourceProviderType: nvarchar(30)
+		lineageTag: 232af827-34a4-432c-b2cc-4aed68a2eb9c
+		summarizeBy: none
+		sourceColumn: CC_COUNTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_STATE
+		dataType: string
+		sourceProviderType: nvarchar(2)
+		lineageTag: 94f76728-5e8e-4f00-abad-b0cd041371d0
+		summarizeBy: none
+		sourceColumn: CC_STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_ZIP
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: e8aff5d9-1180-4b89-8478-f37f0172ab57
+		summarizeBy: none
+		sourceColumn: CC_ZIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_COUNTRY
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		lineageTag: 075d29f0-fc8b-47aa-a9ab-5443dadd2a2b
+		summarizeBy: none
+		sourceColumn: CC_COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_GMT_OFFSET
+		dataType: double
+		sourceProviderType: decimal(5, 2)
+		lineageTag: de897e08-b208-4f23-b02a-f0ada20da355
+		summarizeBy: sum
+		sourceColumn: CC_GMT_OFFSET
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CC_TAX_PERCENTAGE
+		dataType: double
+		sourceProviderType: decimal(5, 2)
+		lineageTag: fa9ab218-fce1-4603-a3a3-a58974f41263
+		summarizeBy: sum
+		sourceColumn: CC_TAX_PERCENTAGE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition CALL_CENTER = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("ICJQFHV-OJ42416.snowflakecomputing.com","SNOWFLAKE_LEARNING_WH",[Implementation="2.0"]),
+				    SNOWFLAKE_SAMPLE_DATA_Database = Source{[Name="SNOWFLAKE_SAMPLE_DATA",Kind="Database"]}[Data],
+				    TPCDS_SF100TCL_Schema = SNOWFLAKE_SAMPLE_DATA_Database{[Name="TPCDS_SF100TCL",Kind="Schema"]}[Data],
+				    CALL_CENTER_Table = TPCDS_SF100TCL_Schema{[Name="CALL_CENTER",Kind="Table"]}[Data]
+				in
+				    CALL_CENTER_Table
+
+	annotation PBI_ResultType = Table
+

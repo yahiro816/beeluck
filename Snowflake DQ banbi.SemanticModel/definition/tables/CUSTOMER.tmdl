@@ -1,0 +1,198 @@
+table CUSTOMER
+	lineageTag: 72b1b6d6-761c-4104-bcf1-2f0979ad09c0
+
+	column C_CUSTOMER_SK
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 913d1f72-b213-4f1a-aa4e-1762a709bb1f
+		summarizeBy: sum
+		sourceColumn: C_CUSTOMER_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_CUSTOMER_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16)
+		lineageTag: 6b526d10-96bb-42e6-aa99-32649cdb91c7
+		summarizeBy: none
+		sourceColumn: C_CUSTOMER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_CURRENT_CDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 184fbefb-3d63-43c1-b420-94bd4ab7dce9
+		summarizeBy: sum
+		sourceColumn: C_CURRENT_CDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_CURRENT_HDEMO_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 6b388dba-b377-4d58-9221-b7e0959b6774
+		summarizeBy: sum
+		sourceColumn: C_CURRENT_HDEMO_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_CURRENT_ADDR_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 655353a1-8919-4949-a1db-3c0afbb6a510
+		summarizeBy: sum
+		sourceColumn: C_CURRENT_ADDR_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_FIRST_SHIPTO_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 2e1fac11-2aed-434d-8559-5e71f68346bc
+		summarizeBy: sum
+		sourceColumn: C_FIRST_SHIPTO_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_FIRST_SALES_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 722b09ef-72dd-4ac4-a017-828184542841
+		summarizeBy: sum
+		sourceColumn: C_FIRST_SALES_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_SALUTATION
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: 1f520bb5-880f-4cb9-8d3f-12d726124ec0
+		summarizeBy: none
+		sourceColumn: C_SALUTATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_FIRST_NAME
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		lineageTag: bb31f414-6db1-4bad-8edb-a960bfb1e7ba
+		summarizeBy: none
+		sourceColumn: C_FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_LAST_NAME
+		dataType: string
+		sourceProviderType: nvarchar(30)
+		lineageTag: 118f1fd4-3e04-427f-8a81-7848f1e5d148
+		summarizeBy: none
+		sourceColumn: C_LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_PREFERRED_CUST_FLAG
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		lineageTag: 930ac6b9-c2d9-476d-88bd-881a0b09e909
+		summarizeBy: none
+		sourceColumn: C_PREFERRED_CUST_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_BIRTH_DAY
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 3e3f5695-9676-491c-b83a-fed62b28cccd
+		summarizeBy: sum
+		sourceColumn: C_BIRTH_DAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_BIRTH_MONTH
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 5d5b65b8-8d3f-493b-853b-daf067a5d470
+		summarizeBy: sum
+		sourceColumn: C_BIRTH_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_BIRTH_YEAR
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 827b2cb4-ce32-409d-9efd-49afe9cf4162
+		summarizeBy: sum
+		sourceColumn: C_BIRTH_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column C_BIRTH_COUNTRY
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		lineageTag: 72c2ae74-3bc3-44aa-b46b-916b4c6ce9cb
+		summarizeBy: none
+		sourceColumn: C_BIRTH_COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_LOGIN
+		dataType: string
+		sourceProviderType: nvarchar(13)
+		lineageTag: 1cec1eb9-a9c2-459f-9f2c-a2b7ddb39391
+		summarizeBy: none
+		sourceColumn: C_LOGIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_EMAIL_ADDRESS
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 267adb3e-4af8-40e2-9ede-8388a59b0c7e
+		summarizeBy: none
+		sourceColumn: C_EMAIL_ADDRESS
+
+		annotation SummarizationSetBy = Automatic
+
+	column C_LAST_REVIEW_DATE
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: 24fc1d9f-504e-433b-ab30-4784e65f5fec
+		summarizeBy: none
+		sourceColumn: C_LAST_REVIEW_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CUSTOMER = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("ICJQFHV-OJ42416.snowflakecomputing.com","SNOWFLAKE_LEARNING_WH",[Implementation="2.0"]),
+				    SNOWFLAKE_SAMPLE_DATA_Database = Source{[Name="SNOWFLAKE_SAMPLE_DATA",Kind="Database"]}[Data],
+				    TPCDS_SF100TCL_Schema = SNOWFLAKE_SAMPLE_DATA_Database{[Name="TPCDS_SF100TCL",Kind="Schema"]}[Data],
+				    CUSTOMER_Table = TPCDS_SF100TCL_Schema{[Name="CUSTOMER",Kind="Table"]}[Data]
+				in
+				    CUSTOMER_Table
+
+	annotation PBI_ResultType = Table
+

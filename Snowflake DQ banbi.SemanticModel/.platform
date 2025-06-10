@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Snowflake DQ banbi"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a32b2f0d-ebd5-a55f-4258-9129f948f7bb"
+  }
+}

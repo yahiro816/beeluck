@@ -1,0 +1,109 @@
+table CATALOG_PAGE
+	lineageTag: 341ca074-5f9a-41c0-b1a9-654b9682cdb1
+
+	column CP_CATALOG_PAGE_SK
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 59c27097-4184-43c5-8b69-9090eb8a99a1
+		summarizeBy: sum
+		sourceColumn: CP_CATALOG_PAGE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CP_CATALOG_PAGE_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16)
+		lineageTag: b69af015-6309-4f0b-9823-e0d3904b830f
+		summarizeBy: none
+		sourceColumn: CP_CATALOG_PAGE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CP_START_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 0bf0f2ae-f73f-4479-bfe5-4d333ea22ce0
+		summarizeBy: sum
+		sourceColumn: CP_START_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CP_END_DATE_SK
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: ac42e9dc-20b5-435a-8c4d-1529036b3881
+		summarizeBy: sum
+		sourceColumn: CP_END_DATE_SK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CP_DEPARTMENT
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: ff80a058-dad3-48ea-b990-efddcd31cffb
+		summarizeBy: none
+		sourceColumn: CP_DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column CP_CATALOG_NUMBER
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 12410827-6238-45ba-9004-bf69dcb7de9e
+		summarizeBy: sum
+		sourceColumn: CP_CATALOG_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CP_CATALOG_PAGE_NUMBER
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 6f5c8677-1d4f-422a-9846-1ced23cd2fb1
+		summarizeBy: sum
+		sourceColumn: CP_CATALOG_PAGE_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CP_DESCRIPTION
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: 99dd3828-90f6-4dad-bce6-1d1c161ccc59
+		summarizeBy: none
+		sourceColumn: CP_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CP_TYPE
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: ab009acf-9bdf-416c-8fba-996202b384ae
+		summarizeBy: none
+		sourceColumn: CP_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CATALOG_PAGE = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("ICJQFHV-OJ42416.snowflakecomputing.com","SNOWFLAKE_LEARNING_WH",[Implementation="2.0"]),
+				    SNOWFLAKE_SAMPLE_DATA_Database = Source{[Name="SNOWFLAKE_SAMPLE_DATA",Kind="Database"]}[Data],
+				    TPCDS_SF100TCL_Schema = SNOWFLAKE_SAMPLE_DATA_Database{[Name="TPCDS_SF100TCL",Kind="Schema"]}[Data],
+				    CATALOG_PAGE_Table = TPCDS_SF100TCL_Schema{[Name="CATALOG_PAGE",Kind="Table"]}[Data]
+				in
+				    CATALOG_PAGE_Table
+
+	annotation PBI_ResultType = Table
+
