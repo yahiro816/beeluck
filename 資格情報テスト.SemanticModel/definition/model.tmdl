@@ -1,0 +1,22 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["クエリ1"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
+
+ref table クエリ1
+ref table DateTableTemplate_1db5c5f9-8010-4621-b47c-44f33f1946f2
+ref table LocalDateTable_525bea65-9caa-48bc-a911-e7549b95dfcd
+ref table LocalDateTable_0322cc6d-f654-4f28-b409-ec668fecaf4e
+ref table LocalDateTable_a90f9da1-6766-49d8-9d07-42031b1e7e16
+
+ref cultureInfo ja-JP
+

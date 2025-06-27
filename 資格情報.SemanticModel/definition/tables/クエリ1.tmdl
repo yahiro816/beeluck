@@ -1,0 +1,79 @@
+table クエリ1
+	lineageTag: a568367d-9daf-4c11-9e12-7b7fa48be4bb
+
+	column Name
+		dataType: string
+		lineageTag: 203f074e-d5d9-4959-a089-33e5ad4e5bf0
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: d86fbe27-8465-4420-8b5b-6d32e1aa4d30
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 289bf831-9d7b-490b-9c8e-aa01b314bdd6
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation バリエーション
+			isDefault
+			relationship: 6dbf7801-4709-4ad7-bb99-63631e05b5a0
+			defaultHierarchy: LocalDateTable_211892dd-d013-4a88-9ef9-9dee02c11536.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 38e7eb3d-f4f8-48e8-ac4e-a67e6e2e2032
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation バリエーション
+			isDefault
+			relationship: f8c9c64e-304a-44ba-91d8-b1bdcb9a3a96
+			defaultHierarchy: LocalDateTable_43b47f53-d3d1-46cb-94f6-375aa6a6d27f.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a56ba69f-cb9e-468a-b7eb-6d95f6862b3e
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation バリエーション
+			isDefault
+			relationship: d478e477-9f5b-4dfe-bb1e-c337a3e59a85
+			defaultHierarchy: LocalDateTable_c0d35a93-9dcc-42d1-8a23-74b32822b67a.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: 777960a1-348a-495c-9e1c-77ab28ea4549
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	partition クエリ1 = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://inventoria.dfs.core.windows.net/")
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

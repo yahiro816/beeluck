@@ -1,0 +1,7 @@
+role 無題
+	modelPermission: read
+
+	tablePermission 'userPrincipalName (Sheet1)' = [Column1] == userPrincipalName ()
+
+	annotation PBI_Id = 00365c5b434c4f9ea6d84fbf4b2382c9
+

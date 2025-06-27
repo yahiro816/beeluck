@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "id": "8510e15d-f80a-4587-8011-25823afdc3d9",
+      "name": "EventLinks",
+      "type": "AzureBlobStorageEvents",
+      "properties": {
+        "azureBlobStorageEvents": [
+          {
+            "id": "fff11903-5cdc-4795-8edb-909b182a5226",
+            "azureResourceId": "/subscriptions/cabaf635-d23b-4689-95d0-e87fa2725863/resourceGroups/testkojiiima/providers/microsoft.storage/storageaccounts/inventoria",
+            "includedEventTypes": [
+              "Microsoft.Storage.BlobCreated",
+              "Microsoft.Storage.BlobDeleted",
+              "Microsoft.Storage.BlobRenamed",
+              "Microsoft.Storage.BlobTierChanged",
+              "Microsoft.Storage.DirectoryCreated",
+              "Microsoft.Storage.DirectoryDeleted",
+              "Microsoft.Storage.DirectoryRenamed",
+              "Microsoft.Storage.BlobInventoryPolicyCompleted",
+              "Microsoft.Storage.AsyncOperationInitiated",
+              "Microsoft.Storage.LifecyclePolicyCompleted"
+            ]
+          }
+        ],
+        "streamEvents": true
+      }
+    }
+  ],
+  "destinations": [],
+  "streams": [
+    {
+      "id": "3c2e3d5f-4742-4c6e-887a-3dabd1b9d575",
+      "name": "new_event_stream-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": []
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.0"
+}

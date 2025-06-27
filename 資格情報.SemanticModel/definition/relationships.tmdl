@@ -1,0 +1,15 @@
+relationship 6dbf7801-4709-4ad7-bb99-63631e05b5a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: クエリ1.'Date accessed'
+	toColumn: LocalDateTable_211892dd-d013-4a88-9ef9-9dee02c11536.Date
+
+relationship f8c9c64e-304a-44ba-91d8-b1bdcb9a3a96
+	joinOnDateBehavior: datePartOnly
+	fromColumn: クエリ1.'Date modified'
+	toColumn: LocalDateTable_43b47f53-d3d1-46cb-94f6-375aa6a6d27f.Date
+
+relationship d478e477-9f5b-4dfe-bb1e-c337a3e59a85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: クエリ1.'Date created'
+	toColumn: LocalDateTable_c0d35a93-9dcc-42d1-8a23-74b32822b67a.Date
+

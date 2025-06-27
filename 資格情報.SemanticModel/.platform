@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "資格情報"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "63c9c2d4-151a-921e-41d5-937041d0310d"
+  }
+}

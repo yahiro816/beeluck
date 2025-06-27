@@ -1,0 +1,79 @@
+table クエリ1
+	lineageTag: cfd9f9df-e6b5-44b0-a3f7-be1efbabc49f
+
+	column Name
+		dataType: string
+		lineageTag: ca122148-516f-4d37-951a-afc6526f07f5
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		lineageTag: 1fd1cadb-04d9-4612-bb88-dd846e67ed07
+		summarizeBy: none
+		sourceColumn: Extension
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 862f5ba0-1384-4df2-a496-b3e1ec06bbc7
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation バリエーション
+			isDefault
+			relationship: 977bf3be-8f7e-4954-9836-fb44fb37ea7a
+			defaultHierarchy: LocalDateTable_525bea65-9caa-48bc-a911-e7549b95dfcd.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fdc3306a-7adf-40dd-b216-6562849c6d50
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation バリエーション
+			isDefault
+			relationship: fe8e6096-5653-4439-8dd3-064a0192d577
+			defaultHierarchy: LocalDateTable_0322cc6d-f654-4f28-b409-ec668fecaf4e.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0ee32e55-0c62-423f-87bd-d4a9267aede5
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation バリエーション
+			isDefault
+			relationship: cebae608-051f-4682-b0b0-52faba5d396f
+			defaultHierarchy: LocalDateTable_a90f9da1-6766-49d8-9d07-42031b1e7e16.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		lineageTag: 8377ec5d-fa43-4da6-b463-9a7824f8032c
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		annotation SummarizationSetBy = Automatic
+
+	partition クエリ1 = m
+		mode: import
+		source =
+				let
+				    ソース = AzureStorage.DataLake("https://inventoria.dfs.core.windows.net/")
+				in
+				    ソース
+
+	annotation PBI_ResultType = Table
+

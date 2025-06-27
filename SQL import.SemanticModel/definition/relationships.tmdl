@@ -1,0 +1,10 @@
+relationship d067402c-02d1-4adf-913d-ce0a10775156
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BuildVersion.VersionDate
+	toColumn: LocalDateTable_e2881565-4bb5-45c0-9635-278991a2603c.Date
+
+relationship e0f7968e-605b-4030-896c-2e4e43562354
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BuildVersion.ModifiedDate
+	toColumn: LocalDateTable_a1607df1-450b-4279-8531-8b65eb46a725.Date
+

@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b79e7d65088d6b81ffca",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1de95a27d58f8ffd9bc0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":352.09726443769,\"y\":158.54103343465047,\"z\":0,\"width\":640.9726443768998,\"height\":434.77203647416417,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"BuildVersion.Database Version\"},{\"queryRef\":\"BuildVersion.ModifiedDate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BuildVersion\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Database Version\"},\"Name\":\"BuildVersion.Database Version\",\"NativeReferenceName\":\"Database Version\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"ModifiedDate\"},\"Name\":\"BuildVersion.ModifiedDate\",\"NativeReferenceName\":\"ModifiedDate\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 434.77,
+          "width": 640.97,
+          "x": 352.10,
+          "y": 158.54,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

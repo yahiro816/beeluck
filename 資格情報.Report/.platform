@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "資格情報"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dfd72642-a6bb-bcf0-4e8e-94bedcc4c669"
+  }
+}

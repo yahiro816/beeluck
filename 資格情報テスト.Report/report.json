@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "2bd3b54197abd7d5ac17",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"065d9e9a5109a8a1ce85\",\"layouts\":[{\"id\":0,\"position\":{\"x\":106.01823708206688,\"y\":112.82674772036475,\"z\":0,\"width\":986.2613981762919,\"height\":393.9209726443769,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"クエリ1.Extension\"},{\"queryRef\":\"クエリ1.Folder Path\"},{\"queryRef\":\"クエリ1.Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"ク\",\"Entity\":\"クエリ1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"Extension\"},\"Name\":\"クエリ1.Extension\",\"NativeReferenceName\":\"Extension\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"Folder Path\"},\"Name\":\"クエリ1.Folder Path\",\"NativeReferenceName\":\"Folder Path\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"Name\"},\"Name\":\"クエリ1.Name\",\"NativeReferenceName\":\"Name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 393.92,
+          "width": 986.26,
+          "x": 106.02,
+          "y": 112.83,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

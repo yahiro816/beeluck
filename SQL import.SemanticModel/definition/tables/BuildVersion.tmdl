@@ -1,0 +1,60 @@
+table BuildVersion
+	lineageTag: c7b65e1b-4563-4c41-84dc-b2e0c6755564
+
+	column SystemInformationID
+		dataType: int64
+		formatString: 0
+		lineageTag: a07a0e88-f464-42d4-99a3-92998f73fe75
+		summarizeBy: count
+		sourceColumn: SystemInformationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Database Version'
+		dataType: string
+		lineageTag: 7673f913-3003-45d2-bb3f-4e2ea740b806
+		summarizeBy: none
+		sourceColumn: Database Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 423bfeb5-64a9-418d-affb-77ea4fafc5d8
+		summarizeBy: none
+		sourceColumn: VersionDate
+
+		variation バリエーション
+			isDefault
+			relationship: d067402c-02d1-4adf-913d-ce0a10775156
+			defaultHierarchy: LocalDateTable_e2881565-4bb5-45c0-9635-278991a2603c.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7c0d0641-22f3-44bb-ac53-b03128b9a793
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation バリエーション
+			isDefault
+			relationship: e0f7968e-605b-4030-896c-2e4e43562354
+			defaultHierarchy: LocalDateTable_a1607df1-450b-4279-8531-8b65eb46a725.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BuildVersion = m
+		mode: import
+		source =
+				let
+				    ソース = Sql.Databases("bambees.database.windows.net"),
+				    Q = ソース{[Name="Q"]}[Data],
+				    dbo_BuildVersion = Q{[Schema="dbo",Item="BuildVersion"]}[Data]
+				in
+				    dbo_BuildVersion
+
+	annotation PBI_ResultType = Table
+
