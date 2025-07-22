@@ -1,0 +1,4 @@
+relationship AutoDetected_d8b8260f-46ae-4bcd-ae57-da9ce1523692
+	fromColumn: Sheet1.Column1
+	toColumn: 'userPrincipalName (Sheet1)'.Column1
+

@@ -1,0 +1,47 @@
+table Sheet1
+	lineageTag: 26de7ec8-9507-47a6-af13-7a148e348dba
+
+	column Column1
+		dataType: string
+		lineageTag: 3da1eef3-7500-4afd-9d88-7e2858fa5d24
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 8562971d-bbea-4b1d-9e1d-dd936d246f30
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 25f90f41-0e1b-4084-9460-0eb7d5484155
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 37a38bbb-73c6-48d2-b897-8c549c24c8c6
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\MSSPAdm01\Desktop\新しいフォルダー\RLS.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Sheet1_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

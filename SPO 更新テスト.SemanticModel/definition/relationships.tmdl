@@ -1,0 +1,5 @@
+relationship 17fb0205-91d5-4396-8a76-8bc0c14bab2d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: クエリ1.time
+	toColumn: LocalDateTable_71312ab9-cda4-46c3-b1f3-318c36767a22.Date
+

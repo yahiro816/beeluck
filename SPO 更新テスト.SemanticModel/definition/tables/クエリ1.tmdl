@@ -1,0 +1,88 @@
+table クエリ1
+	lineageTag: 4fb9dc17-53c4-4eba-ad62-1a55c78bdbca
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: ab8c3824-533b-47ad-b219-ecf3004aa261
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9fe09293-62b5-41a1-b013-136b86fdd0b5
+		summarizeBy: none
+		sourceColumn: time
+
+		variation バリエーション
+			isDefault
+			relationship: 17fb0205-91d5-4396-8a76-8bc0c14bab2d
+			defaultHierarchy: LocalDateTable_71312ab9-cda4-46c3-b1f3-318c36767a22.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column a
+		dataType: int64
+		formatString: 0
+		lineageTag: 15ac3669-2e1a-4c51-9889-5d4ead8ffdc5
+		summarizeBy: sum
+		sourceColumn: a
+
+		annotation SummarizationSetBy = Automatic
+
+	column b
+		dataType: int64
+		formatString: 0
+		lineageTag: b043845a-bf68-49f3-af92-4b0ebf31ff21
+		summarizeBy: sum
+		sourceColumn: b
+
+		annotation SummarizationSetBy = Automatic
+
+	column c
+		dataType: int64
+		formatString: 0
+		lineageTag: a8edb57d-097b-4895-986f-c18061f77030
+		summarizeBy: sum
+		sourceColumn: c
+
+		annotation SummarizationSetBy = Automatic
+
+	column d
+		dataType: int64
+		formatString: 0
+		lineageTag: f1007bad-45c4-46a3-916c-6c2dd0699ce0
+		summarizeBy: sum
+		sourceColumn: d
+
+		annotation SummarizationSetBy = Automatic
+
+	column e
+		dataType: int64
+		formatString: 0
+		lineageTag: ba6d9b18-daf3-4ca2-ac0f-733a61923c57
+		summarizeBy: sum
+		sourceColumn: e
+
+		annotation SummarizationSetBy = Automatic
+
+	partition クエリ1 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://mngenvmcap820421.sharepoint.com/sites/test", [ApiVersion = 15]),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "ファイルの変換", each ファイルの変換([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "ファイルの変換"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "ファイルの変換", Table.ColumnNames(ファイルの変換(#"サンプル ファイル"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"time", type datetime}, {"a", Int64.Type}, {"b", Int64.Type}, {"c", Int64.Type}, {"d", Int64.Type}, {"e", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

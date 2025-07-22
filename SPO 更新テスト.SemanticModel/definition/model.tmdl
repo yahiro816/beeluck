@@ -1,0 +1,28 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'クエリ1 からファイルを変換する'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["クエリ1","パラメーター1","サンプル ファイルの変換","サンプル ファイル","ファイルの変換"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394
+
+ref table クエリ1
+ref table DateTableTemplate_a3f2ed61-e4a7-473e-8a87-3e8340905c40
+ref table LocalDateTable_71312ab9-cda4-46c3-b1f3-318c36767a22
+
+ref cultureInfo ja-JP
+

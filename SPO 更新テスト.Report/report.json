@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.65\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "ページ 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "04bcea594173c61f8ab3",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"42a095a64cb87912f1a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":44.74164133738602,\"y\":87.53799392097265,\"z\":0,\"width\":889.9696048632219,\"height\":535.9270516717326,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"クエリ1.Source.Name\"},{\"queryRef\":\"Sum(クエリ1.a)\"},{\"queryRef\":\"Sum(クエリ1.b)\"},{\"queryRef\":\"Sum(クエリ1.c)\"},{\"queryRef\":\"Sum(クエリ1.d)\"},{\"queryRef\":\"Sum(クエリ1.e)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"ク\",\"Entity\":\"クエリ1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"a\"},\"Name\":\"Sum(クエリ1.a)\",\"NativeReferenceName\":\"a\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"b\"},\"Name\":\"Sum(クエリ1.b)\",\"NativeReferenceName\":\"b\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"c\"},\"Name\":\"Sum(クエリ1.c)\",\"NativeReferenceName\":\"c\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"d\"},\"Name\":\"Sum(クエリ1.d)\",\"NativeReferenceName\":\"d\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"e\"},\"Name\":\"Sum(クエリ1.e)\",\"NativeReferenceName\":\"e\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"ク\"}},\"Property\":\"Source.Name\"},\"Name\":\"クエリ1.Source.Name\",\"NativeReferenceName\":\"Source.Name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 535.93,
+          "width": 889.97,
+          "x": 44.74,
+          "y": 87.54,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

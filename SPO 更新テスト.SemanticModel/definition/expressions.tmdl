@@ -1,0 +1,45 @@
+expression パラメーター1 = #"サンプル ファイル" meta [IsParameterQuery=true, BinaryIdentifier=#"サンプル ファイル", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 40a74d71-02e6-4c4f-86f8-b72863179178
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression 'サンプル ファイルの変換' =
+		let
+		    Source = Excel.Workbook(パラメーター1, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: 027e2a3a-265f-40df-9eb3-d74c9d22732a
+	queryGroup: 'クエリ1 からファイルを変換する'
+
+	annotation PBI_ResultType = Table
+
+expression 'サンプル ファイル' =
+		let
+		    Source = SharePoint.Files("https://mngenvmcap820421.sharepoint.com/sites/test", [ApiVersion = 15]),
+		    #"日付と数値 xlsx_https://mngenvmcap820421 sharepoint com/sites/test/Shared Documents/test/" = Source{[Name="日付と数値.xlsx",#"Folder Path"="https://mngenvmcap820421.sharepoint.com/sites/test/Shared Documents/test/"]}[Content]
+		in
+		    #"日付と数値 xlsx_https://mngenvmcap820421 sharepoint com/sites/test/Shared Documents/test/"
+	lineageTag: 67e91495-f29f-470b-a0a5-85ca96ce7054
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Binary
+
+expression ファイルの変換 =
+		let
+		    ソース = (パラメーター1) => let
+		        Source = Excel.Workbook(パラメーター1, null, true),
+		        Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		        #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		    in
+		        #"Promoted Headers"
+		in
+		    ソース
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""サンプル ファイルの変換""}" ]
+	lineageTag: 75d726af-0950-4f0b-9912-7c1b6a5ef1b4
+	queryGroup: 'クエリ1 からファイルを変換する\ヘルパー クエリ'
+
+	annotation PBI_ResultType = Function
+

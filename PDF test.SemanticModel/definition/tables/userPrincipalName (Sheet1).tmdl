@@ -1,0 +1,49 @@
+table 'userPrincipalName (Sheet1)'
+	lineageTag: ed93bfff-7dd5-49ff-b14f-e53e65e21598
+
+	column Column1
+		dataType: string
+		lineageTag: cb8083be-f888-464f-953d-d04721f44ad6
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 837a4adf-d8da-40f0-844b-002ceb043f35
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 9bcbcf11-66d8-4743-9c50-c1b5bea76f83
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 0010fb7d-225e-4bb7-8f1a-6e01a30b8197
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'userPrincipalName (Sheet1)' = m
+		mode: import
+		source =
+				let
+				    ソース = Excel.Workbook(File.Contents("C:\Users\MSSPAdm01\Desktop\新しいフォルダー\RLS.xlsx"), null, false),
+				    Sheet1_sheet = ソース{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    FilterNullAndWhitespace = each List.Select(_, each _ <> null and (not (_ is text) or Text.Trim(_) <> "")),
+				    削除された下の行 = Table.RemoveLastN(Sheet1_sheet, each try List.IsEmpty(List.Skip(FilterNullAndWhitespace(Record.FieldValues(_)), 1)) otherwise false),
+				    #"Changed Type" = Table.TransformColumnTypes(削除された下の行,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
